@@ -38,6 +38,22 @@ import SignUpScreen from '../SignUpScreen/SignUpScreen';
 import ConfirmEmailScreen from '../ConfirmEmailScreen/ConfirmEmailScreen';
 import ForgotPasswordScreen from '../ForgotPasswordScreen/ForgotPasswordScreen';
 import NewPasswordScreen from '../NewPasswordScreen/NewPasswordScreen';
+import Lvl1Breakdown from '../../emaPass/Lvl1Breakdown';
+import Lvl2Breakdown from '../../emaPass/Lvl2Breakdown';
+import Lvl3Breakdown from '../../emaPass/Lvl3Breakdown';
+import EmaPassMon2 from '../../emaPass/Mon2Breakdown';
+import EmaPassChonJi from '../../emaPass/EmaPass.youtube/EmaPass.Chonji';
+import EmaPassTanGun from '../../emaPass/EmaPass.youtube/EmaPass.TanGun';
+import EmaPassToSan from '../../emaPass/EmaPass.youtube/EmaPass.ToSan';
+import EmaPassWonHyo from '../../emaPass/EmaPass.youtube/EmaPass.WonHyo';
+import EmaPassYulGok from '../../emaPass/EmaPass.youtube/EmaPass.YulGok';
+import EmaPassChungGun from '../../emaPass/EmaPass.youtube/EmaPass.ChungGun';
+import EmaPassToiGye from '../../emaPass/EmaPass.youtube/EmaPass.ToiGye';
+import EmaPassHwaRang from '../../emaPass/EmaPass.youtube/EmaPass.HwaRang';
+import EmaPassPoEun from '../../emaPass/EmaPass.youtube/EmaPass.PoEun';
+import EmaPassGyeBek from '../../emaPass/EmaPass.youtube/EmaPass.GyeBek';
+import EmaPassExodus from '../../emaPass/EmaPass.youtube/EmaPass.Exodus';
+import EmaPassChungMu from '../../emaPass/EmaPass.youtube/EmaPass.ChungMu';
 
 const Stack = createNativeStackNavigator();
 
@@ -92,6 +108,22 @@ const StackNavigation = () => {
 					/>
 					<Stack.Screen name='EMA Pass' component={EmaPass} />
 					<Stack.Screen name='Exclusive' component={Exclusive} />
+					<Stack.Screen name='Level 1 Breakdowns' component={Lvl1Breakdown} />
+					<Stack.Screen name='Level 1 Breakdowns' component={Lvl2Breakdown} />
+					<Stack.Screen name='Level 1 Breakdowns' component={Lvl3Breakdown} />
+					<Stack.Screen name='Month 2 Breakdowns' component={EmaPassMon2} />
+					<Stack.Screen name='Ema Pass Chon Ji' component={EmaPassChonJi} />
+					<Stack.Screen name='Ema Pass Tan Gun' component={EmaPassTanGun} />
+					<Stack.Screen name='Ema Pass To San' component={EmaPassToSan} />
+					<Stack.Screen name='Ema Pass Won Hyo' component={EmaPassWonHyo} />
+					<Stack.Screen name='Ema Pass Yul Gok' component={EmaPassYulGok} />
+					<Stack.Screen name='Ema Pass Chung Gun' component={EmaPassChungGun} />
+					<Stack.Screen name='Ema Pass Toi Gye' component={EmaPassToiGye} />
+					<Stack.Screen name='Ema Pass Hwa Rang' component={EmaPassHwaRang} />
+					<Stack.Screen name='Ema Pass Po Eun' component={EmaPassPoEun} />
+					<Stack.Screen name='Ema Pass Gye Bek' component={EmaPassGyeBek} />
+					<Stack.Screen name='Ema Pass Exodus' component={EmaPassExodus} />
+					<Stack.Screen name='Ema Pass Chung Mu' component={EmaPassChungMu} />
 
 					<Stack.Screen name='Basic' component={BasicHomeScreen} />
 					<Stack.Screen name='Basic Player' component={BasicPlayer} />
