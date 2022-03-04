@@ -92,6 +92,7 @@ const StackNavigation = () => {
 	}
 	return (
 		<Stack.Navigator
+			initialRouteName='HomeStack'
 			screenOptions={{
 				headerTintColor: 'white',
 				headerStyle: {
@@ -100,7 +101,7 @@ const StackNavigation = () => {
 			}}
 		>
 			{user ? (
-				<>
+				<Stack.Group>
 					<Stack.Screen
 						name='HomeStack'
 						options={{ headerShown: false }}
@@ -109,8 +110,8 @@ const StackNavigation = () => {
 					<Stack.Screen name='EMA Pass' component={EmaPass} />
 					<Stack.Screen name='Exclusive' component={Exclusive} />
 					<Stack.Screen name='Level 1 Breakdowns' component={Lvl1Breakdown} />
-					<Stack.Screen name='Level 1 Breakdowns' component={Lvl2Breakdown} />
-					<Stack.Screen name='Level 1 Breakdowns' component={Lvl3Breakdown} />
+					<Stack.Screen name='Level 2 Breakdowns' component={Lvl2Breakdown} />
+					<Stack.Screen name='Level 3 Breakdowns' component={Lvl3Breakdown} />
 					<Stack.Screen name='Month 2 Breakdowns' component={EmaPassMon2} />
 					<Stack.Screen name='Ema Pass Chon Ji' component={EmaPassChonJi} />
 					<Stack.Screen name='Ema Pass Tan Gun' component={EmaPassTanGun} />
@@ -163,9 +164,9 @@ const StackNavigation = () => {
 						name='Karate Homework Card'
 						component={KarateHomeWork}
 					/>
-				</>
+				</Stack.Group>
 			) : (
-				<>
+				<Stack.Group>
 					<Stack.Screen
 						name='Sign In'
 						options={{ headerShown: false }}
@@ -191,7 +192,7 @@ const StackNavigation = () => {
 						options={{ headerShown: false }}
 						component={NewPasswordScreen}
 					/>
-				</>
+				</Stack.Group>
 			)}
 		</Stack.Navigator>
 	);

@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { StyleSheet, View, FlatList, SafeAreaView, Text } from 'react-native';
 
-import { API_KEY } from '../../Youtube/Basic.Player';
-import MiniCard from '../../Youtube/miniCard';
+// import { API_KEY } from '../../basic/Basic.Player';
+// import MiniCard from '../../Youtube/miniCard';
 
 const PlaylistKey = 'PLTCcbu_9GgTgK2OY-JXaPMWYTHNii7gcb';
 

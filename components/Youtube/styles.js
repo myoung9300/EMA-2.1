@@ -34,6 +34,17 @@ const styles = StyleSheet.create({
 		fontWeight: 'bold',
 		textAlign: 'center',
 	},
+	title: {
+		marginTop: 30,
+		color: 'white',
+		fontSize: 20,
+		width: Dimensions.get('screen').width / 2,
+	},
+	subTitle: {
+		fontSize: 12,
+		color: 'white',
+		width: Dimensions.get('screen').width / 2,
+	},
 });
 
 export default styles;

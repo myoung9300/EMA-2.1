@@ -32,24 +32,11 @@ const MiniCard = (props) => {
 						}}
 					/>
 					<View style={{ paddingLeft: 10 }}>
-						<Text
-							style={{
-								marginTop: 30,
-								color: 'black',
-								fontSize: 20,
-								width: Dimensions.get('screen').width / 2,
-							}}
-							ellipsizeMode='tail'
-							numberOfLines={1}
-						>
+						<Text style={styles.title} ellipsizeMode='tail' numberOfLines={1}>
 							{props.title}
 						</Text>
 						<Text
-							style={{
-								fontSize: 12,
-								color: 'black',
-								width: Dimensions.get('screen').width / 2,
-							}}
+							style={styles.subTitle}
 							ellipsizeMode='tail'
 							numberOfLines={2}
 						>
