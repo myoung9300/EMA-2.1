@@ -2,11 +2,11 @@
   "expo": {
     "name": "EMAapp2.0",
     "slug": "emaapp2",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/images/EMADragonLogo.png",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/images/Splash-app.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -22,12 +22,12 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/images/EMADragonLogo.png",
         "backgroundColor": "#FFFFFF"
       }
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/images/EMADragonLogo.png"
     },
     "description": ""
   }
