@@ -5,9 +5,12 @@ import {
 	TouchableOpacity,
 	ScrollView,
 	Image,
+	View,
 } from 'react-native';
 import { Auth } from 'aws-amplify';
 import styles from './styles';
+
+import EMABlue from '../../../../assets/images/EMABlue.png';
 
 const HomePage = ({ navigation }) => {
 	const signOut = () => {
@@ -15,13 +18,12 @@ const HomePage = ({ navigation }) => {
 	};
 	return (
 		<SafeAreaView style={styles.container}>
-			<Image
-				source={require('../../../../assets/images/EMABlue.png')}
-				style={styles.image}
-			/>
-			<TouchableOpacity onPress={signOut}>
-				<Text style={styles.signOut}>Sign Out</Text>
-			</TouchableOpacity>
+			<Image style={styles.image} source={EMABlue} />
+			<View style={{ marginTop: 10, marginHorizontal: 130 }}>
+				<TouchableOpacity onPress={signOut}>
+					<Text style={styles.signOut}>Sign Out</Text>
+				</TouchableOpacity>
+			</View>
 			<Text style={styles.text}>
 				Scroll and click on your level below to view:
 			</Text>

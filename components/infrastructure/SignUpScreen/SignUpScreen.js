@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 
 import {
@@ -19,11 +19,16 @@ const EMAIL_REGEX =
 	/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
 const SignUpScreen = ({ navigation }) => {
+	const [loading, setLoading] = useState(false);
 	const { control, handleSubmit, watch } = useForm();
 	const pwd = watch('password');
 
 	const onRegisterPress = async (data) => {
 		const { name, username, email, password } = data;
+		if (loading) {
+			return;
+		}
+		setLoading(true);
 		try {
 			await Auth.signUp({
 				username,
@@ -34,6 +39,7 @@ const SignUpScreen = ({ navigation }) => {
 		} catch (e) {
 			Alert.alert('Oops', e.message);
 		}
+		setLoading(false);
 	};
 	const onSignInPress = () => {
 		navigation.navigate('Sign In');
@@ -114,7 +120,10 @@ const SignUpScreen = ({ navigation }) => {
 					}}
 				/>
 
-				<CustomButton text='Register' onPress={handleSubmit(onRegisterPress)} />
+				<CustomButton
+					text={loading ? 'Loading...' : 'Register'}
+					onPress={handleSubmit(onRegisterPress)}
+				/>
 				<Text style={styles.text}>
 					By registering, you confirm that you accept our{' '}
 					<Text style={styles.link} onPress={onTermsOfUsePressed}>

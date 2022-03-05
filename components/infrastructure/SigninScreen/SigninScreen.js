@@ -49,7 +49,7 @@ const SignInScreen = ({ navigation }) => {
 	return (
 		<ScrollView showsVerticalScrollIndicator={false}>
 			<SafeAreaView style={styles.container}>
-				<Image style={styles.logo} source={EMABlue} resizeMode='center' />
+				<Image style={styles.logo} source={EMABlue} />
 				<View style={styles.break} />
 				<CustomInput
 					name='username'

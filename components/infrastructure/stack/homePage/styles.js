@@ -25,6 +25,9 @@ const styles = StyleSheet.create({
 	},
 	signOut: {
 		textAlign: 'center',
+		borderColor: 'white',
+		borderWidth: 1,
+		borderRadius: 10,
 		color: '#ff00bb',
 		fontSize: 24,
 		fontWeight: 'bold',
