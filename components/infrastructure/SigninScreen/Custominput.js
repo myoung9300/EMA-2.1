@@ -62,9 +62,5 @@ const styles = StyleSheet.create({
 		textAlign: 'center',
 		fontSize: 18,
 	},
-	error: {
-		color: 'red',
-		alignSelf: 'stretch',
-	},
 });
 export default CustomInput;

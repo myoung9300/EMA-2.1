@@ -48,15 +48,6 @@ const styles = StyleSheet.create({
 		flex: 1,
 		backgroundColor: '#8aff8a',
 	},
-	area: {
-		padding: 10,
-		margin: 10,
-		fontSize: 24,
-		fontFamily: 'Marker Felt',
-		fontWeight: 'bold',
-		color: 'white',
-		textAlign: 'center',
-	},
 });
 
 export default EmaPassGyeBek;

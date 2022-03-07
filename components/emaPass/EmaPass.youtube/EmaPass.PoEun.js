@@ -53,15 +53,6 @@ const styles = StyleSheet.create({
 		flex: 1,
 		backgroundColor: '#8aff8a',
 	},
-	area: {
-		padding: 10,
-		marginTop: 250,
-		fontSize: 24,
-		fontFamily: 'Marker Felt',
-		fontWeight: 'bold',
-		color: 'black',
-		textAlign: 'center',
-	},
 });
 
 export default EmaPassPoEun;
