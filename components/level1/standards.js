@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, ActivityIndicator, Platform } from 'react-native';
 import WebView from 'react-native-webview';
+import PdfReader from 'rn-pdf-reader-js';
 
 const Level1Standards = ({ navigation }) => {
 	if (Platform.OS === 'android') {

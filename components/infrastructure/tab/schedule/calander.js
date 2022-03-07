@@ -1,8 +1,20 @@
 import React from 'react';
-import { SafeAreaView, ActivityIndicator } from 'react-native';
+import { SafeAreaView, ActivityIndicator, Platform } from 'react-native';
 import { WebView } from 'react-native-webview';
+import PdfReader from 'rn-pdf-reader-js';
 
 const CalanderScreen = () => {
+	if (Platform.OS === 'android') {
+		return (
+			<View style={{ flex: 1 }}>
+				<PdfReader
+					source={{
+						uri: 'https://emafiles.herokuapp.com/store/Calendar.pdf',
+					}}
+				/>
+			</View>
+		);
+	}
 	return (
 		<SafeAreaView style={{ flex: 1 }}>
 			<WebView
