@@ -1,8 +1,19 @@
 import React from 'react';
-import { View, ActivityIndicator } from 'react-native';
+import { View, ActivityIndicator, Platform } from 'react-native';
 import WebView from 'react-native-webview';
 
 const Level1Standards = ({ navigation }) => {
+	if (Platform.OS === 'android') {
+		return (
+			<View style={{ flex: 1 }}>
+				<PdfReader
+					source={{
+						uri: 'https://emafiles.herokuapp.com/store/Level_1_Rubric.pdf',
+					}}
+				/>
+			</View>
+		);
+	}
 	return (
 		<View style={{ flex: 1 }}>
 			<WebView
