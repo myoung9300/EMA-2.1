@@ -32,51 +32,51 @@ const NewPasswordScreen = ({ navigation }) => {
 	};
 
 	return (
-		<ScrollView showsVerticalScrollIndicator={false}>
-			<SafeAreaView style={styles.root}>
-				<Text style={styles.title}>Reset your Password</Text>
-				<View style={styles.break} />
-				<CustomInput
-					name='username'
-					placeholder='Username'
-					control={control}
-					rules={{ required: 'Username is required' }}
-				/>
-				<CustomInput
-					name='code'
-					placeholder='Code'
-					control={control}
-					rules={{ required: 'Code is required' }}
-				/>
-				<CustomInput
-					name='password'
-					placeholder='Enter new password'
-					secureTextEntry
-					control={control}
-					rules={{
-						required: 'Password is required',
-						minLength: {
-							value: 6,
-							message: 'Password should be at least 6 characters long',
-						},
-					}}
-				/>
-				<View style={styles.break} />
-				<CustomButton text='Submit' onPress={handleSubmit(onSubmitPressed)} />
-				<View style={styles.break} />
-				<CustomButton
-					text='Back to Sign In'
-					onPress={onSignInPressed}
-					type='TERTIARY'
-				/>
-			</SafeAreaView>
-		</ScrollView>
+		<SafeAreaView style={styles.root}>
+			<Text style={styles.title}>Reset your Password</Text>
+			<View style={styles.break} />
+			<CustomInput
+				name='username'
+				placeholder='Username'
+				control={control}
+				rules={{ required: 'Username is required' }}
+			/>
+			<CustomInput
+				name='code'
+				placeholder='Code'
+				control={control}
+				rules={{ required: 'Code is required' }}
+			/>
+			<CustomInput
+				name='password'
+				placeholder='Enter new password'
+				secureTextEntry
+				control={control}
+				rules={{
+					required: 'Password is required',
+					minLength: {
+						value: 6,
+						message: 'Password should be at least 6 characters long',
+					},
+				}}
+			/>
+			<View style={styles.break} />
+			<CustomButton text='Submit' onPress={handleSubmit(onSubmitPressed)} />
+			<View style={styles.break} />
+			<CustomButton
+				text='Back to Sign In'
+				onPress={onSignInPressed}
+				type='TERTIARY'
+			/>
+		</SafeAreaView>
 	);
 };
 
 const styles = StyleSheet.create({
 	root: {
+		paddingTop: 10,
 		alignItems: 'center',
+		marginHorizontal: 10,
 	},
 	title: {
 		fontSize: 24,

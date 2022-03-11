@@ -30,32 +30,29 @@ const ForgotPasswordScreen = ({ navigation }) => {
 
 	const { control, handleSubmit } = useForm();
 	return (
-		<ScrollView showsVerticalScrollIndicator={false}>
-			<SafeAreaView style={styles.container}>
-				<View style={styles.break} />
-				<Text style={styles.title}>Reset your Password</Text>
-				<View style={styles.break} />
-				<CustomInput
-					name='username'
-					placeholder='Username'
-					control={control}
-					rules={{ required: 'Username is required' }}
-				/>
-				<View style={styles.break} />
-				<CustomButton text='Send' onPress={handleSubmit(onSendPressed)} />
-				<View style={styles.break} />
-				<CustomButton
-					text='Back to Sign In'
-					onPress={onSignInPressed}
-					type='TERTIARY'
-				/>
-			</SafeAreaView>
-		</ScrollView>
+		<SafeAreaView style={styles.container}>
+			<Text style={styles.title}>Reset your Password</Text>
+			<View style={styles.break} />
+			<CustomInput
+				name='username'
+				placeholder='Username'
+				control={control}
+				rules={{ required: 'Username is required' }}
+			/>
+			<CustomButton text='Send' onPress={handleSubmit(onSendPressed)} />
+			<View style={styles.break} />
+			<CustomButton
+				text='Back to Sign In'
+				onPress={onSignInPressed}
+				type='TERTIARY'
+			/>
+		</SafeAreaView>
 	);
 };
 
 const styles = StyleSheet.create({
 	container: {
+		paddingTop: 10,
 		alignItems: 'center',
 		marginHorizontal: 10,
 	},

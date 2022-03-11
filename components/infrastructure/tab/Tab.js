@@ -20,15 +20,15 @@ const TabNavigation = () => {
 					let iconName;
 
 					if (route.name === 'Home') {
-						iconName = 'folder-home-outline';
+						iconName = 'home';
 					} else if (route.name === 'Class Sign Up') {
-						iconName = 'google-classroom';
+						iconName = 'account-group';
 					} else if (route.name === 'Student Portal') {
-						iconName = 'account-details';
+						iconName = 'checkbox-multiple-blank-circle-outline';
 					} else if (route.name === 'Schedule') {
 						iconName = 'clock';
 					} else if (route.name === 'Virtual Karate') {
-						iconName = 'video';
+						iconName = 'video-account';
 					}
 
 					return (

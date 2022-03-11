@@ -52,101 +52,100 @@ const SignUpScreen = ({ navigation }) => {
 	};
 
 	return (
-		<ScrollView showsVerticalScrollIndicator={false}>
-			<SafeAreaView style={styles.root}>
-				<Text style={styles.title}>Create Account</Text>
-				<View style={styles.break} />
-				<CustomInput
-					name='name'
-					placeholder='Name'
-					control={control}
-					rules={{
-						required: 'Name is required',
-						minLength: {
-							value: 5,
-							message: 'Name should be at least 5 characters long',
-						},
-						maxLength: {
-							value: 24,
-							message: 'Name should be max 24 characters long',
-						},
-					}}
-				/>
-				<CustomInput
-					name='username'
-					placeholder='Username'
-					control={control}
-					rules={{
-						required: 'Username is required',
-						minLength: {
-							value: 5,
-							message: 'Username should be at least 5 characters long',
-						},
-						maxLength: {
-							value: 24,
-							message: 'Username should be max 24 characters long',
-						},
-					}}
-				/>
-				<CustomInput
-					name='email'
-					placeholder='Email'
-					control={control}
-					rules={{
-						required: 'Username is required',
-						pattern: { value: EMAIL_REGEX, message: 'Email is invalid' },
-					}}
-				/>
-				<CustomInput
-					name='password'
-					placeholder='Password'
-					control={control}
-					secureTextEntry
-					rules={{
-						required: 'Password is required',
-						minLength: {
-							value: 6,
-							message: 'Password should be at least 6 characters long',
-						},
-					}}
-				/>
-				<CustomInput
-					name='password-repeat'
-					placeholder='Re-enter Password'
-					control={control}
-					secureTextEntry
-					rules={{
-						validate: (value) => value === pwd || 'Passwords do not match',
-					}}
-				/>
+		<SafeAreaView style={styles.root}>
+			<Text style={styles.title}>Create Account</Text>
+			<View style={styles.break} />
+			<CustomInput
+				name='name'
+				placeholder='Name'
+				control={control}
+				rules={{
+					required: 'Name is required',
+					minLength: {
+						value: 5,
+						message: 'Name should be at least 5 characters long',
+					},
+					maxLength: {
+						value: 24,
+						message: 'Name should be max 24 characters long',
+					},
+				}}
+			/>
+			<CustomInput
+				name='username'
+				placeholder='Username'
+				control={control}
+				rules={{
+					required: 'Username is required',
+					minLength: {
+						value: 5,
+						message: 'Username should be at least 5 characters long',
+					},
+					maxLength: {
+						value: 24,
+						message: 'Username should be max 24 characters long',
+					},
+				}}
+			/>
+			<CustomInput
+				name='email'
+				placeholder='Email'
+				control={control}
+				rules={{
+					required: 'Username is required',
+					pattern: { value: EMAIL_REGEX, message: 'Email is invalid' },
+				}}
+			/>
+			<CustomInput
+				name='password'
+				placeholder='Password'
+				control={control}
+				secureTextEntry
+				rules={{
+					required: 'Password is required',
+					minLength: {
+						value: 6,
+						message: 'Password should be at least 6 characters long',
+					},
+				}}
+			/>
+			<CustomInput
+				name='password-repeat'
+				placeholder='Re-enter Password'
+				control={control}
+				secureTextEntry
+				rules={{
+					validate: (value) => value === pwd || 'Passwords do not match',
+				}}
+			/>
 
-				<CustomButton
-					text={loading ? 'Loading...' : 'Register'}
-					onPress={handleSubmit(onRegisterPress)}
-				/>
-				<Text style={styles.text}>
-					By registering, you confirm that you accept our{' '}
-					<Text style={styles.link} onPress={onTermsOfUsePressed}>
-						Terms of use
-					</Text>{' '}
-					and{' '}
-					<Text style={styles.link} onPress={onPrivacyPolicyPressed}>
-						Privacy Policy
-					</Text>
+			<CustomButton
+				text={loading ? 'Loading...' : 'Register'}
+				onPress={handleSubmit(onRegisterPress)}
+			/>
+			<Text style={styles.text}>
+				By registering, you confirm that you accept our{' '}
+				<Text style={styles.link} onPress={onTermsOfUsePressed}>
+					Terms of use
+				</Text>{' '}
+				and{' '}
+				<Text style={styles.link} onPress={onPrivacyPolicyPressed}>
+					Privacy Policy
 				</Text>
-				<View style={styles.break} />
-				<CustomButton
-					text='Have an account? Sign in'
-					onPress={onSignInPress}
-					type='TERTIARY'
-				/>
-			</SafeAreaView>
-		</ScrollView>
+			</Text>
+			<View style={styles.break} />
+			<CustomButton
+				text='Have an account? Sign in'
+				onPress={onSignInPress}
+				type='TERTIARY'
+			/>
+		</SafeAreaView>
 	);
 };
 
 const styles = StyleSheet.create({
 	root: {
+		paddingTop: 10,
 		alignItems: 'center',
 		marginHorizontal: 10,
 	},

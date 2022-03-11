@@ -6,13 +6,13 @@ import PdfReader from 'rn-pdf-reader-js';
 const WeeklySchedule = () => {
 	if (Platform.OS === 'android') {
 		return (
-			<View style={{ flex: 1 }}>
+			<SafeAreaView style={{ flex: 1 }}>
 				<PdfReader
 					source={{
 						uri: 'https://emafiles.herokuapp.com/store/schedule.pdf',
 					}}
 				/>
-			</View>
+			</SafeAreaView>
 		);
 	}
 	return (

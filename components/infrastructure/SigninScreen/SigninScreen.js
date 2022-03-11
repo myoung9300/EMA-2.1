@@ -47,54 +47,53 @@ const SignInScreen = ({ navigation }) => {
 	};
 
 	return (
-		<ScrollView showsVerticalScrollIndicator={false}>
-			<SafeAreaView style={styles.container}>
-				<Image style={styles.logo} source={EMABlue} />
-				<View style={styles.break} />
-				<CustomInput
-					name='username'
-					placeholder='Username'
-					control={control}
-					rules={{ required: 'Username is required' }}
-				/>
-				<CustomInput
-					name='password'
-					placeholder='Password'
-					control={control}
-					secureTextEntry
-					type='PRIMARY'
-					rules={{
-						required: 'Password is required',
-						minLength: {
-							value: 4,
-							message: 'Password should be minumium 4 characters long',
-						},
-					}}
-				/>
+		<SafeAreaView style={styles.container}>
+			<Image style={styles.logo} source={EMABlue} />
+			<View style={styles.break} />
+			<CustomInput
+				name='username'
+				placeholder='Username'
+				control={control}
+				rules={{ required: 'Username is required' }}
+			/>
+			<CustomInput
+				name='password'
+				placeholder='Password'
+				control={control}
+				secureTextEntry
+				type='PRIMARY'
+				rules={{
+					required: 'Password is required',
+					minLength: {
+						value: 4,
+						message: 'Password should be minumium 4 characters long',
+					},
+				}}
+			/>
 
-				<CustomButton
-					text={loading ? 'Loading...' : 'Sign In'}
-					onPress={handleSubmit(onSignInPress)}
-				/>
-				<CustomButton
-					text='Forgot password?'
-					onPress={onForgotPasswordPress}
-					type='TERTIARY'
-				/>
-				<View style={styles.break} />
-				<View style={styles.break} />
-				<CustomButton
-					text="Don't have an account? Create one"
-					onPress={onSignUp}
-					type='TERTIARY'
-				/>
-			</SafeAreaView>
-		</ScrollView>
+			<CustomButton
+				text={loading ? 'Loading...' : 'Sign In'}
+				onPress={handleSubmit(onSignInPress)}
+			/>
+			<CustomButton
+				text='Forgot password?'
+				onPress={onForgotPasswordPress}
+				type='TERTIARY'
+			/>
+			<View style={styles.break} />
+			<View style={styles.break} />
+			<CustomButton
+				text="Don't have an account? Create one"
+				onPress={onSignUp}
+				type='TERTIARY'
+			/>
+		</SafeAreaView>
 	);
 };
 
 const styles = StyleSheet.create({
 	container: {
+		paddingTop: 10,
 		alignItems: 'center',
 		marginHorizontal: 10,
 	},

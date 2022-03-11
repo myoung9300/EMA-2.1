@@ -1,5 +1,12 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, ScrollView, Alert } from 'react-native';
+import {
+	SafeAreaView,
+	View,
+	Text,
+	StyleSheet,
+	ScrollView,
+	Alert,
+} from 'react-native';
 import { useRoute } from '@react-navigation/native';
 import { useForm } from 'react-hook-form';
 import { Auth } from 'aws-amplify';
@@ -36,44 +43,44 @@ const ConfirmEmailScreen = ({ navigation }) => {
 	};
 
 	return (
-		<ScrollView showsVerticalScrollIndicator={false}>
-			<View style={styles.root}>
-				<Text style={styles.title}>Confirm Email</Text>
-				<View style={styles.break} />
-				<CustomInput
-					name='username'
-					placeholder='Username'
-					control={control}
-					rules={{ required: 'Username is required' }}
-				/>
-				<CustomInput
-					name='code'
-					placeholder='Enter your confirmation code'
-					control={control}
-					rules={{ required: 'Confirmation code is required' }}
-				/>
-				<View style={styles.break} />
-				<CustomButton text='Confirm' onPress={handleSubmit(onConfirmPressed)} />
+		<SafeAreaView style={styles.root}>
+			<Text style={styles.title}>Confirm Email</Text>
+			<View style={styles.break} />
+			<CustomInput
+				name='username'
+				placeholder='Username'
+				control={control}
+				rules={{ required: 'Username is required' }}
+			/>
+			<CustomInput
+				name='code'
+				placeholder='Enter your confirmation code'
+				control={control}
+				rules={{ required: 'Confirmation code is required' }}
+			/>
+			<View style={styles.break} />
+			<CustomButton text='Confirm' onPress={handleSubmit(onConfirmPressed)} />
 
-				<CustomButton
-					text='Resend code'
-					onPress={onResendPressed}
-					type='SECONDARY'
-				/>
-				<View style={styles.break} />
-				<CustomButton
-					text='Back to Sign In'
-					onPress={onSignInPressed}
-					type='TERTIARY'
-				/>
-			</View>
-		</ScrollView>
+			<CustomButton
+				text='Resend code'
+				onPress={onResendPressed}
+				type='SECONDARY'
+			/>
+			<View style={styles.break} />
+			<CustomButton
+				text='Back to Sign In'
+				onPress={onSignInPressed}
+				type='TERTIARY'
+			/>
+		</SafeAreaView>
 	);
 };
 
 const styles = StyleSheet.create({
 	root: {
+		paddingTop: 10,
 		alignItems: 'center',
+		marginHorizontal: 10,
 	},
 	title: {
 		fontSize: 24,
