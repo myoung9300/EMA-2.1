@@ -27,8 +27,8 @@ const HomePage = ({ navigation }) => {
 			<Text style={styles.text}>
 				Scroll and click on your level below to view:
 			</Text>
-			<Text style={styles.text}>1. Video Curriculum</Text>
-			<Text style={styles.text}>2. Belt Testing Registration</Text>
+			<Text style={styles.smallText}>1. Video Curriculum</Text>
+			<Text style={styles.smallText}>2. Belt Testing Registration</Text>
 			<ScrollView>
 				<TouchableOpacity onPress={() => navigation.navigate('EMA Pass')}>
 					<Text style={styles.area}>EMA Pass</Text>

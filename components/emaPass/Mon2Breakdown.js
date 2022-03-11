@@ -56,8 +56,8 @@ const styles = StyleSheet.create({
 	area: {
 		padding: 10,
 		marginTop: 250,
-		fontSize: 24,
-		fontFamily: 'Marker Felt',
+		fontSize: 40,
+		fontFamily: 'CaveatBrush_400Regular',
 		fontWeight: 'bold',
 		color: 'black',
 		textAlign: 'center',
