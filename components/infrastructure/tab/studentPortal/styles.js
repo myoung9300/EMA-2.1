@@ -3,10 +3,10 @@ import { StyleSheet } from 'react-native';
 const styles = StyleSheet.create({
 	flexContainer: {
 		flex: 1,
-		paddingTop: 10,
+		paddingTop: 16,
 	},
 	tabBarContainer: {
-		paddingTop: 10,
+		paddingTop: 16,
 		borderTopLeftRadius: 20,
 		borderTopRightRadius: 20,
 		backgroundColor: 'rgb(49,115,193)',
@@ -14,9 +14,11 @@ const styles = StyleSheet.create({
 		justifyContent: 'space-between',
 	},
 	button: {
-		color: 'black',
+		color: 'white',
+		paddingTop: 10,
 		marginLeft: 20,
 		marginRight: 20,
+		paddingBottom: 10,
 		fontSize: 24,
 		fontWeight: 'bold',
 	},

@@ -1,5 +1,9 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { ActivityIndicator, View } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+
+import { Auth, Hub } from 'aws-amplify';
+
 import Icon from 'react-native-ionicons';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
@@ -12,9 +16,41 @@ import VirtualClass from './virtualKarate/index';
 const Tab = createBottomTabNavigator();
 
 const TabNavigation = () => {
+	const [user, setUser] = useState(undefined);
+	const checkUser = async () => {
+		try {
+			const authUser = await Auth.currentAuthenticatedUser({
+				bypassCache: true,
+			});
+			setUser(authUser);
+		} catch (e) {
+			setUser(null);
+		}
+	};
+
+	useEffect(() => {
+		checkUser();
+	}, []);
+	useEffect(() => {
+		const listener = (data) => {
+			if (data.payload.event === 'signIn' || data.payload.event === 'signOut') {
+				checkUser();
+			}
+		};
+		Hub.listen('auth', listener);
+		return () => Hub.remove('auth', listener);
+	}, []);
+
+	if (user === undefined) {
+		return (
+			<View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+				<ActivityIndicator />
+			</View>
+		);
+	}
 	return (
 		<Tab.Navigator
-			sceneContainerStyle={{ backgroundColor: '#006eff' }}
+			sceneContainerStyle={{ backgroundColor: '#0045b5' }}
 			screenOptions={({ route }) => ({
 				tabBarIcon: ({ color, size }) => {
 					let iconName;
@@ -42,7 +78,7 @@ const TabNavigation = () => {
 						)
 					);
 				},
-				tabBarStyle: { backgroundColor: '#006eff' },
+				tabBarStyle: { backgroundColor: '#0045b5' },
 				tabBarActiveBackgroundColor: 'white',
 				tabBarInactiveTintColor: 'white',
 			})}
@@ -52,16 +88,19 @@ const TabNavigation = () => {
 				component={StackNavigation}
 				options={{ headerShown: false }}
 			/>
+
 			<Tab.Screen
 				name='Class Sign Up'
 				component={ClassScreenNavigator}
 				options={{ headerShown: false }}
 			/>
-			<Tab.Screen
-				name='Student Portal'
-				component={StudentPortal}
-				options={{ headerShown: false }}
-			/>
+			{user ? (
+				<Tab.Screen
+					name='Student Portal'
+					component={StudentPortal}
+					options={{ headerShown: false }}
+				/>
+			) : undefined}
 			<Tab.Screen
 				name='Schedule'
 				component={ScheduleScreenNavigator}

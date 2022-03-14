@@ -74,14 +74,13 @@ const NewPasswordScreen = ({ navigation }) => {
 
 const styles = StyleSheet.create({
 	root: {
-		paddingTop: 10,
+		paddingTop: 16,
 		alignItems: 'center',
-		marginHorizontal: 10,
 	},
 	title: {
 		fontSize: 24,
 		fontWeight: 'bold',
-		color: '#051c60',
+		color: '#0045b5',
 		margin: 10,
 	},
 	break: {

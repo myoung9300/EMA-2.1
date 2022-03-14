@@ -62,8 +62,8 @@ const SignUpScreen = ({ navigation }) => {
 				rules={{
 					required: 'Name is required',
 					minLength: {
-						value: 5,
-						message: 'Name should be at least 5 characters long',
+						value: 8,
+						message: 'Should be First and Last name',
 					},
 					maxLength: {
 						value: 24,
@@ -145,14 +145,14 @@ const SignUpScreen = ({ navigation }) => {
 
 const styles = StyleSheet.create({
 	root: {
-		paddingTop: 10,
+		flex: 1,
+		paddingTop: 16,
 		alignItems: 'center',
-		marginHorizontal: 10,
 	},
 	title: {
 		fontSize: 24,
 		fontWeight: 'bold',
-		color: '#051c60',
+		color: '#0045b5',
 		margin: 10,
 	},
 	text: {

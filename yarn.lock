@@ -3004,10 +3004,10 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
-"@expo-google-fonts/caveat-brush@^0.2.2":
+"@expo-google-fonts/nunito@^0.2.2":
   version "0.2.2"
-  resolved "https://registry.yarnpkg.com/@expo-google-fonts/caveat-brush/-/caveat-brush-0.2.2.tgz#6969215fdd6e423b792527850f38689f6060be0a"
-  integrity sha512-ua9Lih0IiBPQx1nQ2CaSQiZn6uHO1GNxh2REdlCtTnVM8KYSLQNFHQlOBSodEdUJGI4dUDjyLZu3PJCm6H+ijA==
+  resolved "https://registry.yarnpkg.com/@expo-google-fonts/nunito/-/nunito-0.2.2.tgz#591ba2e215204939c376c5f450071ef7626b4d87"
+  integrity sha512-ETADsCjZt6LmJKj3f1D01YZ3hJU3D2S0JEKd9yuTOmW7KJGuqEB37uE6SwMbmHOEWXmdtygw2k1Smm2xg3KnEw==
 
 "@expo-google-fonts/patrick-hand-sc@^0.2.2":
   version "0.2.2"

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { StyleSheet, View, FlatList } from 'react-native';
+import { View, FlatList } from 'react-native';
 import MiniCard from '../Youtube/miniCard';
+import styles from './styles';
 
 const PlaylistKey = 'PLTCcbu_9GgTjXloZ523Pd6vOdNE2EQkGb';
 export const API_KEY = 'AIzaSyDGdX_6R680MoskUWKy47IBIT7BI8l9H5k';
@@ -43,12 +44,5 @@ const BasicPlayer = () => {
 		</View>
 	);
 };
-
-const styles = StyleSheet.create({
-	container: {
-		flex: 1,
-		backgroundColor: '#006eff',
-	},
-});
 
 export default BasicPlayer;

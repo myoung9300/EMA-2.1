@@ -93,9 +93,8 @@ const SignInScreen = ({ navigation }) => {
 
 const styles = StyleSheet.create({
 	container: {
-		paddingTop: 10,
+		paddingTop: 16,
 		alignItems: 'center',
-		marginHorizontal: 10,
 	},
 	logo: {
 		alignSelf: 'center',

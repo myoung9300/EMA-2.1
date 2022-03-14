@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { StyleSheet, View, FlatList } from 'react-native';
+import { View, FlatList } from 'react-native';
+import styles from '../basic/styles';
 import MiniCard from '../Youtube/miniCard';
 import { API_KEY } from '../basic/Basic.Player';
 
@@ -43,12 +44,5 @@ const BBPlayer = () => {
 		</View>
 	);
 };
-
-const styles = StyleSheet.create({
-	container: {
-		flex: 1,
-		backgroundColor: '#006eff',
-	},
-});
 
 export default BBPlayer;

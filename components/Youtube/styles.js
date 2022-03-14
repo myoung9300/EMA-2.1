@@ -24,23 +24,24 @@ const styles = StyleSheet.create({
 		elevation: 2,
 	},
 	buttonClose: {
-		backgroundColor: '#006eff',
+		backgroundColor: '#0045b5',
 	},
 	modalText: {
 		margin: 2,
 		fontSize: 24,
 		color: 'white',
-		fontFamily: 'Marker Felt',
-		fontWeight: 'bold',
+		fontFamily: 'Nunito_800ExtraBold',
 		textAlign: 'center',
 	},
 	title: {
+		fontFamily: 'Nunito_800ExtraBold',
 		marginTop: 30,
 		color: 'white',
 		fontSize: 20,
 		width: Dimensions.get('screen').width / 2,
 	},
 	subTitle: {
+		fontFamily: 'Nunito_600SemiBold',
 		fontSize: 12,
 		color: 'white',
 		width: Dimensions.get('screen').width / 2,

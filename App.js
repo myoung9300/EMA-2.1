@@ -9,16 +9,20 @@ import Amplify from 'aws-amplify';
 import awsconfig from './src/aws-exports';
 import TabNavigation from './components/infrastructure/tab/Tab';
 
-import { CaveatBrush_400Regular } from '@expo-google-fonts/caveat-brush';
 import { PatrickHandSC_400Regular } from '@expo-google-fonts/patrick-hand-sc';
+import {
+	Nunito_600SemiBold,
+	Nunito_800ExtraBold,
+} from '@expo-google-fonts/nunito';
 import { useFonts } from 'expo-font';
 import AppLoading from 'expo-app-loading';
 
 Amplify.configure(awsconfig);
 export default function App() {
 	let [fontsLoaded, error] = useFonts({
-		CaveatBrush_400Regular,
 		PatrickHandSC_400Regular,
+		Nunito_600SemiBold,
+		Nunito_800ExtraBold,
 	});
 	if (!fontsLoaded) {
 		return <AppLoading />;

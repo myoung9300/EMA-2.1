@@ -4,7 +4,7 @@ const styles = StyleSheet.create({
 	container: {
 		flex: 1,
 		paddingTop: 50,
-		backgroundColor: '#006eff',
+		backgroundColor: '#0045b5',
 	},
 	text: {
 		fontFamily: 'PatrickHandSC_400Regular',
@@ -18,19 +18,19 @@ const styles = StyleSheet.create({
 		borderRadius: 10,
 		borderWidth: 3,
 		borderColor: 'white',
-		fontSize: 40,
-		fontFamily: 'CaveatBrush_400Regular',
+		fontSize: 30,
+		fontFamily: 'Nunito_800ExtraBold',
 		color: 'white',
 		textAlign: 'center',
 	},
 	signOut: {
+		fontFamily: 'Nunito_800ExtraBold',
 		textAlign: 'center',
 		borderColor: 'white',
 		borderWidth: 1,
 		borderRadius: 10,
 		color: '#ff00bb',
-		fontSize: 24,
-		fontWeight: 'bold',
+		fontSize: 18,
 	},
 	image: {
 		alignSelf: 'center',
@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
 		color: 'white',
 	},
 	bigText: {
-		fontFamily: 'CaveatBrush_400Regular',
+		fontFamily: 'Nunito_800ExtraBold',
 		paddingTop: 200,
 		color: 'white',
 		fontSize: 40,

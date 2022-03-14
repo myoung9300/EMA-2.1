@@ -3,6 +3,7 @@ import { StyleSheet, View, FlatList, SafeAreaView } from 'react-native';
 
 import { API_KEY } from '../../basic/Basic.Player';
 import MiniCard from '../../Youtube/miniCard';
+import styles from '../styles';
 
 const PlaylistKey = 'PLTCcbu_9GgTgK2OY-JXaPMWYTHNii7gcb';
 
@@ -42,12 +43,5 @@ const EmaPassChonJi = (key) => {
 		</SafeAreaView>
 	);
 };
-
-const styles = StyleSheet.create({
-	container: {
-		flex: 1,
-		backgroundColor: '#8aff8a',
-	},
-});
 
 export default EmaPassChonJi;

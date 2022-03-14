@@ -12,9 +12,15 @@ const styles = StyleSheet.create({
 		borderRadius: 10,
 		borderWidth: 3,
 		borderColor: 'black',
-		fontSize: 35,
-		fontFamily: 'CaveatBrush_400Regular',
+		fontSize: 30,
+		fontFamily: 'Nunito_800ExtraBold',
 		color: 'black',
+		textAlign: 'center',
+	},
+	bigText: {
+		fontFamily: 'Nunito_800ExtraBold',
+		paddingTop: 200,
+		fontSize: 30,
 		textAlign: 'center',
 	},
 });

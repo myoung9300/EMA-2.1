@@ -14,7 +14,7 @@ const ClassScreenNavigator = () => {
 			screenOptions={{
 				headerTintColor: 'white',
 				headerStyle: {
-					backgroundColor: '#006eff',
+					backgroundColor: '#0045b5',
 				},
 			}}
 		>

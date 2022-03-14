@@ -8,7 +8,7 @@
 		"splash": {
 			"image": "./assets/images/Splash-app.png",
 			"resizeMode": "contain",
-			"backgroundColor": "#ffffff"
+			"backgroundColor": "#0045b5"
 		},
 		"updates": {
 			"fallbackToCacheTimeout": 0
@@ -21,9 +21,10 @@
 		"android": {
 			"adaptiveIcon": {
 				"foregroundImage": "./assets/images/EMADragonLogo.png",
-				"backgroundColor": "#FFFFFF"
+				"backgroundColor": "#0045b5"
 			},
-			"package": "com.myoung9300.emaapp2"
+			"package": "com.myoung9300.emaapp2",
+			"versionCode": 2
 		},
 		"web": {
 			"favicon": "./assets/images/EMADragonLogo.png"

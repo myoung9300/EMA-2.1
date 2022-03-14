@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { StyleSheet, View, FlatList, SafeAreaView, Text } from 'react-native';
+import { View, FlatList, SafeAreaView, Text } from 'react-native';
+import styles from './styles';
 
 // import { API_KEY } from '../Youtube/Basic.Player';
 // import MiniCard from '../../MiddleVIew/Youtube/miniCard';
@@ -9,7 +10,7 @@ const PlaylistKey = 'PLTCcbu_9GgTgK2OY-JXaPMWYTHNii7gcb';
 const EmaPassMon2 = (key) => {
 	return (
 		<SafeAreaView style={styles.container}>
-			<Text style={styles.area}>Content Coming Soon!</Text>
+			<Text style={styles.bigText}>Content Coming Soon!</Text>
 		</SafeAreaView>
 	);
 	// const [Breakdown, setBreakdown] = useState('');
@@ -47,21 +48,5 @@ const EmaPassMon2 = (key) => {
 	// 	</SafeAreaView>
 	// )
 };
-
-const styles = StyleSheet.create({
-	container: {
-		flex: 1,
-		backgroundColor: '#8aff8a',
-	},
-	area: {
-		padding: 10,
-		marginTop: 250,
-		fontSize: 40,
-		fontFamily: 'CaveatBrush_400Regular',
-		fontWeight: 'bold',
-		color: 'black',
-		textAlign: 'center',
-	},
-});
 
 export default EmaPassMon2;

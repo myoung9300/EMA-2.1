@@ -3,7 +3,7 @@ import { StyleSheet } from 'react-native';
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
-		backgroundColor: '#006eff',
+		backgroundColor: '#0045b5',
 	},
 	area: {
 		paddingVertical: 30,
@@ -11,8 +11,8 @@ const styles = StyleSheet.create({
 		borderRadius: 10,
 		borderWidth: 3,
 		borderColor: 'white',
-		fontSize: 40,
-		fontFamily: 'CaveatBrush_400Regular',
+		fontSize: 30,
+		fontFamily: 'Nunito_800ExtraBold',
 		fontWeight: 'bold',
 		color: 'white',
 		textAlign: 'center',

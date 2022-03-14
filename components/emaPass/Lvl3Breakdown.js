@@ -1,5 +1,6 @@
 import React from 'react';
-import { View, StyleSheet, TouchableOpacity, Text } from 'react-native';
+import { View, TouchableOpacity, Text } from 'react-native';
+import styles from './styles';
 
 const Lvl3Breakdown = ({ navigation }) => {
 	return (
@@ -21,24 +22,5 @@ const Lvl3Breakdown = ({ navigation }) => {
 		</View>
 	);
 };
-
-const styles = StyleSheet.create({
-	container: {
-		flex: 1,
-		paddingTop: 40,
-		backgroundColor: '#8aff8a',
-	},
-	Button: {
-		padding: 10,
-		margin: 10,
-		borderRadius: 10,
-		borderWidth: 3,
-		borderColor: 'black',
-		fontSize: 40,
-		fontFamily: 'CaveatBrush_400Regular',
-		color: 'black',
-		textAlign: 'center',
-	},
-});
 
 export default Lvl3Breakdown;
