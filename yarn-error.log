@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/bin/node /usr/local/bin/yarnpkg add @expo-google-fonts/nunito
+  /usr/local/bin/node /usr/local/bin/yarn add react-native-paper
 
 PATH: 
   /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin
@@ -14,6 +14,7 @@ Platform:
   darwin x64
 
 Trace: 
+  Error: EACCES: permission denied, mkdir '/Users/mattyoung/Documents/Projects/EMA-2.0/node_modules/react-native-elements/node_modules/deepmerge'
 
 npm manifest: 
   {
@@ -28,7 +29,7 @@ npm manifest:
   		"eject": "expo eject"
   	},
   	"dependencies": {
-  		"@expo-google-fonts/caveat-brush": "^0.2.2",
+  		"@expo-google-fonts/nunito": "^0.2.2",
   		"@expo-google-fonts/patrick-hand-sc": "^0.2.2",
   		"@react-native-async-storage/async-storage": "~1.15.0",
   		"@react-native-community/netinfo": "^7.1.3",
@@ -40,6 +41,7 @@ npm manifest:
   		"aws-amplify-react-native": "^6.0.3",
   		"expo": "~44.0.0",
   		"expo-app-loading": "~1.3.0",
+  		"expo-linear-gradient": "~11.0.3",
   		"expo-status-bar": "~1.2.0",
   		"expo-updates": "~0.11.6",
   		"react": "17.0.1",
@@ -3070,10 +3072,10 @@ Lockfile:
       exec-sh "^0.3.2"
       minimist "^1.2.0"
   
-  "@expo-google-fonts/caveat-brush@^0.2.2":
+  "@expo-google-fonts/nunito@^0.2.2":
     version "0.2.2"
-    resolved "https://registry.yarnpkg.com/@expo-google-fonts/caveat-brush/-/caveat-brush-0.2.2.tgz#6969215fdd6e423b792527850f38689f6060be0a"
-    integrity sha512-ua9Lih0IiBPQx1nQ2CaSQiZn6uHO1GNxh2REdlCtTnVM8KYSLQNFHQlOBSodEdUJGI4dUDjyLZu3PJCm6H+ijA==
+    resolved "https://registry.yarnpkg.com/@expo-google-fonts/nunito/-/nunito-0.2.2.tgz#591ba2e215204939c376c5f450071ef7626b4d87"
+    integrity sha512-ETADsCjZt6LmJKj3f1D01YZ3hJU3D2S0JEKd9yuTOmW7KJGuqEB37uE6SwMbmHOEWXmdtygw2k1Smm2xg3KnEw==
   
   "@expo-google-fonts/patrick-hand-sc@^0.2.2":
     version "0.2.2"
@@ -4871,6 +4873,11 @@ Lockfile:
     version "10.0.2"
     resolved "https://registry.npmjs.org/expo-keep-awake/-/expo-keep-awake-10.0.2.tgz"
     integrity sha512-Ro1lgyKldbFs4mxhWM+goX9sg0S2SRR8FiJJeOvaRzf8xNhrZfWA00Zpr+/3ocCoWQ3eEL+X9UF4PXXHf0KoOg==
+  
+  expo-linear-gradient@~11.0.3:
+    version "11.0.3"
+    resolved "https://registry.yarnpkg.com/expo-linear-gradient/-/expo-linear-gradient-11.0.3.tgz#bc559b9a251c9dc8aa37fb6c66c7a497fe92993c"
+    integrity sha512-LuzTM5+iEHCQfC2TBHAAI+ZjPvf0TvGiA7GYMsyTnakGA2r4JtsV8Ah/miQPKhfG06jLDOo4grUoSMGqbmSrEw==
   
   expo-manifests@~0.2.2:
     version "0.2.4"
