@@ -66,7 +66,7 @@ const SignInScreen = ({ navigation }) => {
 					required: 'Password is required',
 					minLength: {
 						value: 4,
-						message: 'Password should be minumium 4 characters long',
+						message: 'Password should be minumium 6 characters long',
 					},
 				}}
 			/>

@@ -14,10 +14,10 @@ const styles = StyleSheet.create({
 		borderRadius: 80 / 2,
 	},
 	image: {
-		width: 250,
-		height: 250,
-		borderRadius: 250 / 2,
-		marginTop: -50,
+		width: 230,
+		height: 230,
+		borderRadius: 230 / 2,
+		marginTop: -85,
 	},
 	card: {
 		backgroundColor: '#0045b5',
@@ -31,12 +31,12 @@ const styles = StyleSheet.create({
 		alignItems: 'center',
 	},
 	title: {
-		fontSize: 30,
+		fontSize: 32,
 		fontFamily: 'Nunito_800ExtraBold',
 		textAlign: 'center',
 	},
 	subTitle: {
-		fontSize: 20,
+		fontSize: 26,
 		fontFamily: 'PatrickHandSC_400Regular',
 		textAlign: 'center',
 		margin: 6,
@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
 	instructorCardText: {
 		marginTop: 3,
 		marginLeft: 8,
-		fontSize: 16,
+		fontSize: 24,
 		fontFamily: 'PatrickHandSC_400Regular',
 		textAlign: 'center',
 	},

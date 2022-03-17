@@ -57,7 +57,7 @@ const SignUpScreen = ({ navigation }) => {
 			<View style={styles.break} />
 			<CustomInput
 				name='name'
-				placeholder='Name'
+				placeholder='Name: First and Last...'
 				control={control}
 				rules={{
 					required: 'Name is required',
@@ -92,7 +92,7 @@ const SignUpScreen = ({ navigation }) => {
 				placeholder='Email'
 				control={control}
 				rules={{
-					required: 'Username is required',
+					required: 'Email is required',
 					pattern: { value: EMAIL_REGEX, message: 'Email is invalid' },
 				}}
 			/>

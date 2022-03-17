@@ -21,6 +21,7 @@ const VirtualClass = () => {
 			<Text style={styles.text}>
 				Click on one of the links below to join your class...
 			</Text>
+			<View style={styles.break} />
 			<TouchableOpacity
 				onPress={() => {
 					Linking.openURL(

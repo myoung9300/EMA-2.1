@@ -16,10 +16,8 @@ const ScheduleScreen = ({ navigation }) => {
 				style={styles.image}
 			/>
 			<View style={styles.break} />
-			<Text style={styles.text}>
-				Here is the updated schedule and current calander to view for your
-				houshold...
-			</Text>
+			<Text style={styles.text}>Current Schedule and Calander</Text>
+			<View style={styles.break} />
 			<TouchableOpacity onPress={() => navigation.navigate('Weekly Schedule')}>
 				<Text style={styles.area}>Weekly Schedule</Text>
 			</TouchableOpacity>

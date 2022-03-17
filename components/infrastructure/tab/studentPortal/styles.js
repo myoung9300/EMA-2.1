@@ -6,7 +6,7 @@ const styles = StyleSheet.create({
 		paddingTop: 16,
 	},
 	tabBarContainer: {
-		paddingTop: 16,
+		paddingTop: 20,
 		borderTopLeftRadius: 20,
 		borderTopRightRadius: 20,
 		backgroundColor: 'rgb(49,115,193)',

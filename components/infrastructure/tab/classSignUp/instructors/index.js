@@ -16,10 +16,10 @@ const InstructorPVT = ({ navigation }) => {
 		{
 			id: '1',
 			name: 'Master Young',
-			picture:
-				'https://scontent.fapa1-2.fna.fbcdn.net/v/t1.6435-9/131787071_10217586783249029_9055075386359666967_n.jpg?_nc_cat=100&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=9MW86_3jkCAAX-OgsCe&_nc_ht=scontent.fapa1-2.fna&oh=00_AT8JjGbjo9A2pnZf6TSIu4tMETZ_MkrQjerc7xc-1ZP2fg&oe=625675CF',
+			picture1: require('../../../../../assets/images/instPics/matt1.jpg'),
+			picture2: require('../../../../../assets/images/instPics/matt2.jpg'),
 			aboutMe:
-				'I like Pizza and spending time with my kids. I started trtaining in the martial arts when i was 7 years old, got my black belt at 10, and started teaching when i was 13 years old.',
+				'I started training in the martial arts when i was 7 years old, got my black belt at 10, and started teaching when I was 13 years old. Some of my favorite foods are: pizza, peanut butter & jelly sandwiches, and milk duds. I love training and teaching the martial arts to anyone that wants to learn!',
 			email: 'myoung9300@yahoo.com',
 			position: 'Head Instructor',
 			calendly: 'https://calendly.com/masteryoung',
@@ -27,9 +27,10 @@ const InstructorPVT = ({ navigation }) => {
 		{
 			id: '2',
 			name: 'Mr. Cisneros',
-			picture:
-				'https://scontent.fapa1-1.fna.fbcdn.net/v/t1.6435-9/117593717_3664293083595592_4434180618410705725_n.jpg?_nc_cat=101&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=Xrhht8Se9AAAX8aKQE2&_nc_ht=scontent.fapa1-1.fna&oh=00_AT9S7yLKsYnjWBjcB_IhReHY1QFkYjfIy2K47QkLbmUuWw&oe=625798CD',
-			aboutMe: 'I love to sniff glue',
+			picture1: require('../../../../../assets/images/instPics/sal1.jpg'),
+			picture2: require('../../../../../assets/images/instPics/sal2.jpg'),
+			aboutMe:
+				'I am a 3rd Degree Black Belt in Tae-Kwon_Do and a Purple Belt in Brazilian Ju-Jit-Su. I love my family and kids! I really like downloading music and creating all sorts of playlists to listen to. Whatever your in the mood for, one of my playlists will get you through...',
 			email: 'cisnerosnorth@comcast.net',
 			position: 'Admissions Director',
 			calendly: 'https://calendly.com/mr-c',
@@ -37,9 +38,10 @@ const InstructorPVT = ({ navigation }) => {
 		{
 			id: '3',
 			name: 'Mr. Morrisey',
-			picture:
-				'https://scontent.fapa1-2.fna.fbcdn.net/v/t1.6435-9/134690693_1649267918580046_415322359816813673_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=bUvA4D9CV7cAX-Pv0oe&_nc_ht=scontent.fapa1-2.fna&oh=00_AT-J0AiF7hvBOpkK5bDC84DcGkKyyDGUR0kQrTIw3rW4ww&oe=62585E57',
-			aboutMe: 'Teaching is my job, Acting is my passion!',
+			picture1: require('../../../../../assets/images/instPics/nick1.jpg'),
+			picture2: require('../../../../../assets/images/instPics/nick2.jpg'),
+			aboutMe:
+				'Teaching is my job, Acting is my passion! I have been training in the martial arts for over 15 years. I  am a 3rd Degree Black Belt, soon to test for my 4th. I went to collage to become  a set designer and I really love it!',
 			email: 'nicmor2@gmail.com',
 			position: 'Assistant Instructor',
 			calendly: 'https://calendly.com/nicmor2',
@@ -47,9 +49,10 @@ const InstructorPVT = ({ navigation }) => {
 		{
 			id: '4',
 			name: 'Ms. Young',
-			picture:
-				'https://scontent.fapa1-2.fna.fbcdn.net/v/t39.30808-6/262391135_995920200957231_5657691625357639197_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=p_Q4pHgtAWYAX-2enMS&tn=nKbmER6Ch6H91Vcy&_nc_ht=scontent.fapa1-2.fna&oh=00_AT_K2zm9qudqdSYLUeQM1deGfiT7Zy7hgZAgTBNDSk5L9Q&oe=6236E1CC',
-			aboutMe: "I'm not sure what i want to be when I grow up...",
+			picture1: require('../../../../../assets/images/instPics/kaylee1.jpg'),
+			picture2: require('../../../../../assets/images/instPics/kaylee2.jpg'),
+			aboutMe:
+				"I started training in the martial arts when I was 3 years old. I am currently a 3rd Degree Black Belt and an instructor here art EMA! I have 2 younger sisters that also do martial arts. I'm currently going to college at Metro State.",
 			email: 'kayleeyoung222@gmail.com',
 			position: 'Assistant Instructor',
 			calendly: '',
@@ -57,19 +60,21 @@ const InstructorPVT = ({ navigation }) => {
 		{
 			id: '5',
 			name: 'Ms. Mestas',
-			picture:
-				'https://scontent.fapa1-1.fna.fbcdn.net/v/t39.30808-6/274947752_5650635398286163_2090798651017868885_n.jpg?_nc_cat=111&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=d6PX1i86KpIAX8J8Gx1&_nc_ht=scontent.fapa1-1.fna&oh=00_AT-4xdpP5C0V5YnnQvbgbiyTKH3XGnHsR7d2M8RNheAxDg&oe=62375456',
-			aboutMe: 'I want to move to Hawaii one day!',
-			email: '',
+			picture1: require('../../../../../assets/images/instPics/jessica1.jpg'),
+			picture2: require('../../../../../assets/images/instPics/jessica2.jpg'),
+			aboutMe:
+				'I have been trainig in the martial arts for over 10 years. I am a 2nd Degree Black Belt working towards my next rank. I love spending time with my familiy and love teaching karate to kids and adults. I graduate High School in 2022 and plan on doing some traveling once I graduate. Some places that i would like to see are: Japan, Hawaii, and Italy.',
+			email: 'jessiemessie2003@gmail.com',
 			position: 'Assistant Instructor',
 			calendly: '',
 		},
 		{
 			id: '6',
 			name: 'Ms. Graham',
-			picture:
-				'https://scontent.fapa1-2.fna.fbcdn.net/v/t39.30808-6/249554762_707410518179_4278165660772803084_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=OjyxEFfxkvQAX9bu57I&_nc_ht=scontent.fapa1-2.fna&oh=00_AT-oriFeCqRTE7EVGyttzqegZPoNkbiRNB9kZKV_ZxKMzw&oe=62381437',
-			aboutMe: 'I love the outdoors! I like to hike, swim, ski, and snowboard.',
+			picture1: require('../../../../../assets/images/instPics/brandi1.jpg'),
+			picture2: require('../../../../../assets/images/instPics/brandi2.jpg'),
+			aboutMe:
+				'I am a 1st Degree Black Belt at EMA. I have been training for a little over 5 years. I recently just got married to my high school sweet heart! I love the outdoors! I like to hike, swim, ski, and snowboard.',
 			email: 'doritybee@gmail.com',
 			position: 'Assistant Instructor',
 			calendly: '',
@@ -83,12 +88,7 @@ const InstructorPVT = ({ navigation }) => {
 					onPress={() => navigation.navigate('Instructor Card', { item })}
 				>
 					<View style={styles.cardInsideView}>
-						<Image
-							style={styles.smallImage}
-							source={{
-								uri: item.picture,
-							}}
-						/>
+						<Image style={styles.smallImage} source={item.picture1} />
 						<View style={{ marginLeft: 30 }}>
 							<Text style={styles.title}>{item.name}</Text>
 							<Text style={styles.subTitle}>{item.position}</Text>
