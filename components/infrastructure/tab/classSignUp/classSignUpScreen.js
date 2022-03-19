@@ -20,7 +20,6 @@ const ClassSignUp = ({ navigation }) => {
 			<View>
 				<Text style={styles.text}>Sign up for the following: </Text>
 			</View>
-
 			<ScrollView>
 				<TouchableOpacity
 					onPress={() => navigation.navigate('Weekly Schedule')}

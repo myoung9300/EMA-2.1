@@ -3,7 +3,6 @@ import { StyleSheet } from 'react-native';
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
-		paddingTop: 50,
 		backgroundColor: '#0045b5',
 	},
 	text: {
@@ -68,6 +67,17 @@ const styles = StyleSheet.create({
 		marginRight: 20,
 		fontSize: 12,
 		fontWeight: 'bold',
+	},
+	container2: {
+		justifyContent: 'center',
+		alignItems: 'center',
+	},
+	btn: {
+		flexDirection: 'row',
+		alignItems: 'center',
+		borderRadius: 16,
+		fontFamily: 'PatrickHandSC_400Regular',
+		fontSize: 20,
 	},
 });
 

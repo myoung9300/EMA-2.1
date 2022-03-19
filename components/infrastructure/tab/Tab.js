@@ -1,19 +1,99 @@
-import React, { useState, useEffect } from 'react';
-import { ActivityIndicator, View } from 'react-native';
+import React, { useState, useEffect, useRef } from 'react';
+import { ActivityIndicator, TouchableOpacity, View, Text } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import * as Animatable from 'react-native-animatable';
 
 import { Auth, Hub } from 'aws-amplify';
 
-import Icon from 'react-native-ionicons';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
+import Icon, { Icons } from '../tab/icons';
 
 import ScheduleScreenNavigator from './schedule/index';
 import ClassScreenNavigator from './classSignUp';
 import StackNavigation from '../stack/Stack';
 import StudentPortal from './studentPortal/index';
 import VirtualClass from './virtualKarate/index';
+import styles from '../stack/homePage/styles';
+
+const TabArr = [
+	{
+		route: 'Home',
+		label: 'Home',
+		type: Icons.Ionicons,
+		activeIcon: 'grid',
+		inActiveIcon: 'grid-outline',
+		component: StackNavigation,
+	},
+	{
+		route: 'Class Sign Up',
+		label: 'Class',
+		type: Icons.MaterialCommunityIcons,
+		activeIcon: 'account-group',
+		inActiveIcon: 'account-group-outline',
+		component: ClassScreenNavigator,
+	},
+	{
+		route: 'Student Portal',
+		label: 'Portal',
+		type: Icons.MaterialCommunityIcons,
+		activeIcon: 'checkbox-multiple-blank-circle',
+		inActiveIcon: 'checkbox-multiple-blank-circle-outline',
+		component: StudentPortal,
+	},
+	{
+		route: 'Schedule',
+		label: 'Schedule',
+		type: Icons.MaterialCommunityIcons,
+		activeIcon: 'clock',
+		inActiveIcon: 'clock-outline',
+		component: ScheduleScreenNavigator,
+	},
+	{
+		route: 'Virtual Karate',
+		label: 'Karate',
+		type: Icons.Ionicons,
+		activeIcon: 'ios-videocam',
+		inActiveIcon: 'ios-videocam-outline',
+		component: VirtualClass,
+	},
+];
 
 const Tab = createBottomTabNavigator();
+
+const TabBarButton = (props) => {
+	const { item, onPress, accessibilityState } = props;
+	const focused = accessibilityState.selected;
+	const viewRef = useRef(null);
+	useEffect(() => {
+		if (focused) {
+			viewRef.current.animate({
+				0: { scale: 0.7 },
+				1: { scale: 1.5 },
+			});
+		} else {
+			viewRef.current.animate({
+				0: { scale: 1.5 },
+				1: { scale: 0.7 },
+			});
+		}
+	}, [focused]);
+
+	return (
+		<TouchableOpacity
+			style={[styles.container2, { flex: focused ? 1 : 0.7 }]}
+			onPress={onPress}
+			activeOpacity={1}
+		>
+			<Animatable.View ref={viewRef} duration={500} style={styles.container2}>
+				<Icon
+					type={item.type}
+					name={focused ? item.activeIcon : item.inActiveIcon}
+					color={focused ? '#0045b5' : '#bbbdbb'}
+				/>
+				<Text style={styles.btn}>{item.label}</Text>
+			</Animatable.View>
+		</TouchableOpacity>
+	);
+};
 
 const TabNavigation = () => {
 	const [user, setUser] = useState(undefined);
@@ -50,67 +130,32 @@ const TabNavigation = () => {
 	}
 	return (
 		<Tab.Navigator
-			sceneContainerStyle={{ backgroundColor: '#0045b5' }}
-			screenOptions={({ route }) => ({
-				tabBarIcon: ({ color, size }) => {
-					let iconName;
-
-					if (route.name === 'Home') {
-						iconName = 'home';
-					} else if (route.name === 'Class Sign Up') {
-						iconName = 'account-group';
-					} else if (route.name === 'Student Portal') {
-						iconName = 'checkbox-multiple-blank-circle-outline';
-					} else if (route.name === 'Schedule') {
-						iconName = 'clock';
-					} else if (route.name === 'Virtual Karate') {
-						iconName = 'video-account';
-					}
-
-					return (
-						(<Icon name={iconName} size={size} color={color} />),
-						(
-							<MaterialCommunityIcons
-								name={iconName}
-								size={size}
-								color={color}
-							/>
-						)
-					);
+			screenOptions={{
+				headerShown: false,
+				tabBarStyle: {
+					paddingBottom: 0,
+					height: 90,
+					position: 'absolute',
+					bottom: 18,
+					right: 18,
+					left: 18,
+					borderRadius: 18,
 				},
-				tabBarStyle: { backgroundColor: '#0045b5' },
-				tabBarActiveBackgroundColor: 'white',
-				tabBarInactiveTintColor: 'white',
-			})}
+			}}
 		>
-			<Tab.Screen
-				name='Home'
-				component={StackNavigation}
-				options={{ headerShown: false }}
-			/>
-
-			<Tab.Screen
-				name='Class Sign Up'
-				component={ClassScreenNavigator}
-				options={{ headerShown: false }}
-			/>
-			{user ? (
-				<Tab.Screen
-					name='Student Portal'
-					component={StudentPortal}
-					options={{ headerShown: false }}
-				/>
-			) : undefined}
-			<Tab.Screen
-				name='Schedule'
-				component={ScheduleScreenNavigator}
-				options={{ headerShown: false }}
-			/>
-			<Tab.Screen
-				name='Virtual Karate'
-				component={VirtualClass}
-				options={{ headerShown: false }}
-			/>
+			{TabArr.map((item, index) => {
+				return (
+					<Tab.Screen
+						key={index}
+						options={{
+							tabBarShowLabel: false,
+							tabBarButton: (props) => <TabBarButton {...props} item={item} />,
+						}}
+						name={item.route}
+						component={item.component}
+					/>
+				);
+			})}
 		</Tab.Navigator>
 	);
 };

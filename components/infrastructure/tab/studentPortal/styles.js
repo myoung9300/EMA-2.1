@@ -3,7 +3,8 @@ import { StyleSheet } from 'react-native';
 const styles = StyleSheet.create({
 	flexContainer: {
 		flex: 1,
-		paddingTop: 16,
+		paddingTop: 50,
+		backgroundColor: '#0045b5',
 	},
 	tabBarContainer: {
 		paddingTop: 20,
