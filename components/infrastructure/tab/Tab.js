@@ -49,7 +49,7 @@ const TabArr = [
 	},
 	{
 		route: 'Virtual Karate',
-		label: 'Karate',
+		label: 'Virtual',
 		type: Icons.Ionicons,
 		activeIcon: 'ios-videocam',
 		inActiveIcon: 'ios-videocam-outline',
@@ -67,11 +67,11 @@ const TabBarButton = (props) => {
 		if (focused) {
 			viewRef.current.animate({
 				0: { scale: 0.7 },
-				1: { scale: 1.5 },
+				1: { scale: 1.3 },
 			});
 		} else {
 			viewRef.current.animate({
-				0: { scale: 1.5 },
+				0: { scale: 1.3 },
 				1: { scale: 0.7 },
 			});
 		}
@@ -87,9 +87,11 @@ const TabBarButton = (props) => {
 				<Icon
 					type={item.type}
 					name={focused ? item.activeIcon : item.inActiveIcon}
-					color={focused ? '#0045b5' : '#bbbdbb'}
+					color={focused ? '#8c8c8c' : '#0045b5'}
 				/>
-				<Text style={styles.btn}>{item.label}</Text>
+				<Text style={[styles.btn, { color: focused ? '#0045b5' : '#8c8c8c' }]}>
+					{item.label}
+				</Text>
 			</Animatable.View>
 		</TouchableOpacity>
 	);
@@ -132,15 +134,6 @@ const TabNavigation = () => {
 		<Tab.Navigator
 			screenOptions={{
 				headerShown: false,
-				tabBarStyle: {
-					paddingBottom: 0,
-					height: 90,
-					position: 'absolute',
-					bottom: 18,
-					right: 18,
-					left: 18,
-					borderRadius: 18,
-				},
 			}}
 		>
 			{TabArr.map((item, index) => {
