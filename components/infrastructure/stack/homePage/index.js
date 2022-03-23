@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
 	SafeAreaView,
 	Text,
@@ -8,6 +8,7 @@ import {
 	View,
 } from 'react-native';
 import { Auth } from 'aws-amplify';
+
 import styles from './styles';
 
 import EMABlue from '../../../../assets/images/EMABlue.png';
