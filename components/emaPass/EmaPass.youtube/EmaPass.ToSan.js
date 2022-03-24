@@ -16,7 +16,6 @@ const EmaPassToSan = (key) => {
 	// const [Breakdown, setBreakdown] = useState('');
 	// const [loading, setLoading] = useState(false);
 	// const fetchData = () => {
-	// 	console.log(key);
 	// 	fetch(
 	// 		`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${PlaylistKey}&maxResults=50&key=${API_KEY}`
 	// 	)
@@ -24,7 +23,6 @@ const EmaPassToSan = (key) => {
 	// 		.then((data) => {
 	// 			setBreakdown(data.items);
 	// 			setLoading(false);
-	// 			// console.log(data);
 	// 		});
 	// };
 	// useEffect(() => {

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import {
 	Image,
 	SafeAreaView,
@@ -7,9 +7,16 @@ import {
 	View,
 	ScrollView,
 } from 'react-native';
+import { getPushDataObject } from 'native-notify';
 import styles from '../../stack/homePage/styles';
 
-const ClassSignUp = ({ navigation }) => {
+export default function ClassSignUp({ navigation }) {
+	let pushDataObject = getPushDataObject();
+	useEffect(() => {
+		if (pushDataObject.screenName === 'Private') {
+			navigation.navigate('Semi pvt Lessons');
+		}
+	});
 	return (
 		<SafeAreaView style={styles.container}>
 			<Image
@@ -39,6 +46,4 @@ const ClassSignUp = ({ navigation }) => {
 			</ScrollView>
 		</SafeAreaView>
 	);
-};
-
-export default ClassSignUp;
+}

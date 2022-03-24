@@ -17,7 +17,6 @@ const EmaPassYulGok = (key) => {
 			.then((data) => {
 				setBreakdown(data.items);
 				setLoading(false);
-				// console.log(data);
 			});
 	};
 	useEffect(() => {
