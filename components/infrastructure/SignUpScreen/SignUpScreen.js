@@ -146,7 +146,7 @@ const SignUpScreen = ({ navigation }) => {
 const styles = StyleSheet.create({
 	root: {
 		flex: 1,
-		paddingTop: 16,
+		paddingTop: 28,
 		alignItems: 'center',
 	},
 	title: {

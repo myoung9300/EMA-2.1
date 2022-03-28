@@ -2,6 +2,7 @@ import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
 	container: {
+		paddingTop: 28,
 		flex: 1,
 		backgroundColor: '#0045b5',
 	},
@@ -75,9 +76,9 @@ const styles = StyleSheet.create({
 	btn: {
 		flexDirection: 'row',
 		alignItems: 'center',
-		borderRadius: 16,
+		paddingBottom: 16,
 		fontFamily: 'PatrickHandSC_400Regular',
-		fontSize: 20,
+		fontSize: 16,
 	},
 });
 

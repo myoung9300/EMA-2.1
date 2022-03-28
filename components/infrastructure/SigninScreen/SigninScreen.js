@@ -6,7 +6,6 @@ import {
 	Image,
 	StyleSheet,
 	SafeAreaView,
-	ScrollView,
 	useWindowDimensions,
 } from 'react-native';
 
@@ -93,7 +92,7 @@ const SignInScreen = ({ navigation }) => {
 
 const styles = StyleSheet.create({
 	container: {
-		paddingTop: 16,
+		paddingTop: 28,
 		alignItems: 'center',
 	},
 	logo: {

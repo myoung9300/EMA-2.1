@@ -2,13 +2,13 @@
 	"expo": {
 		"name": "EMAapp2.0",
 		"slug": "emaapp2",
-		"version": "1.5.1",
+		"version": "1.6.1",
 		"orientation": "portrait",
 		"icon": "./assets/images/EMADragonLogo.png",
 		"splash": {
 			"image": "./assets/images/Splash-app.png",
 			"resizeMode": "contain",
-			"backgroundColor": "#0045b5"
+			"backgroundColor": "#2000FA"
 		},
 		"updates": {
 			"fallbackToCacheTimeout": 0
@@ -21,11 +21,11 @@
 		"android": {
 			"adaptiveIcon": {
 				"foregroundImage": "./assets/images/EMADragonLogo.png",
-				"backgroundColor": "#0045b5"
+				"backgroundColor": "#2000FA"
 			},
 			"googleServicesFile": "./google-services.json",
 			"package": "com.myoung9300.emaapp2",
-			"versionCode": 6
+			"versionCode": 7
 		},
 		"web": {
 			"favicon": "./assets/images/EMADragonLogo.png"

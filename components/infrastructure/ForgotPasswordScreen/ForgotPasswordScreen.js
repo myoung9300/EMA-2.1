@@ -52,7 +52,7 @@ const ForgotPasswordScreen = ({ navigation }) => {
 
 const styles = StyleSheet.create({
 	container: {
-		paddingTop: 16,
+		paddingTop: 28,
 		alignItems: 'center',
 	},
 	title: {

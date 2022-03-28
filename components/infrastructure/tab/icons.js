@@ -9,7 +9,7 @@ export const Icons = {
 };
 
 const Icon = ({ type, name, color }) => {
-	const iconSize = 30;
+	const iconSize = 24;
 	const Tag = type;
 	return (
 		<>{type && name && <Tag name={name} size={iconSize} color={color} />}</>

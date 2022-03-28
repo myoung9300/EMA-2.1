@@ -78,7 +78,7 @@ const ConfirmEmailScreen = ({ navigation }) => {
 
 const styles = StyleSheet.create({
 	root: {
-		paddingTop: 16,
+		paddingTop: 28,
 		alignItems: 'center',
 	},
 	title: {

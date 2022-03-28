@@ -67,11 +67,11 @@ const TabBarButton = (props) => {
 		if (focused) {
 			viewRef.current.animate({
 				0: { scale: 0.7 },
-				1: { scale: 1.3 },
+				1: { scale: 1.5 },
 			});
 		} else {
 			viewRef.current.animate({
-				0: { scale: 1.3 },
+				0: { scale: 1.5 },
 				1: { scale: 0.7 },
 			});
 		}
