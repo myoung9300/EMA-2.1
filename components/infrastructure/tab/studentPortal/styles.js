@@ -6,6 +6,10 @@ const styles = StyleSheet.create({
 		paddingTop: 50,
 		backgroundColor: '#0045b5',
 	},
+	flexContainer2: {
+		flex: 1,
+		backgroundColor: '#0045b5',
+	},
 	tabBarContainer: {
 		paddingTop: 20,
 		borderTopLeftRadius: 20,

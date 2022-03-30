@@ -27,7 +27,7 @@ const Classes = () => {
 		if (webviewRef.current) webviewRef.current.goForward();
 	};
 	return (
-		<SafeAreaView style={styles.flexContainer}>
+		<SafeAreaView style={styles.flexContainer2}>
 			<View style={styles.tabBarContainer}>
 				<TouchableOpacity onPress={backButtonHandler}>
 					<Text style={styles.button}>Back</Text>

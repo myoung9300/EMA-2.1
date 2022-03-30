@@ -77,7 +77,7 @@ const InstructorPVT = ({ navigation }) => {
 				'I am a 1st Degree Black Belt at EMA. I have been training for a little over 5 years. I recently just got married to my high school sweet heart! I love the outdoors! I like to hike, swim, ski, and snowboard.',
 			email: 'doritybee@gmail.com',
 			position: 'Assistant Instructor',
-			calendly: '',
+			calendly: 'https://calendly.com/grahambee',
 		},
 	];
 	const renderList = (item) => {
