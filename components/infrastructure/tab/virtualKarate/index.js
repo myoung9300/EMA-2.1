@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
 	Image,
 	SafeAreaView,
@@ -6,14 +6,14 @@ import {
 	Text,
 	TouchableOpacity,
 	Linking,
-} from 'react-native';
-import styles from '../../stack/homePage/styles';
+} from "react-native";
+import styles from "../../stack/homePage/styles";
 
 const VirtualClass = () => {
 	return (
 		<SafeAreaView style={styles.container}>
 			<Image
-				source={require('../../../../assets/images/EMABlue.png')}
+				source={require("../../../../assets/images/EMABlue.png")}
 				style={styles.image}
 			/>
 			<View style={styles.break} />
@@ -25,7 +25,7 @@ const VirtualClass = () => {
 			<TouchableOpacity
 				onPress={() => {
 					Linking.openURL(
-						'https://zoom.us/j/3039720114?pwd=WmZWUUpFSjRITnB6VmM1UCtRS0ZtQT09'
+						"https://zoom.us/j/3039720114?pwd=WmZWUUpFSjRITnB6VmM1UCtRS0ZtQT09"
 					);
 				}}
 			>
@@ -34,7 +34,7 @@ const VirtualClass = () => {
 			<TouchableOpacity
 				onPress={() => {
 					Linking.openURL(
-						'https://zoom.us/j/3039720109?pwd=RHJMSkJRZndzSVB6ZTJiYi9tdnlIUT09'
+						"https://zoom.us/j/3039720109?pwd=RHJMSkJRZndzSVB6ZTJiYi9tdnlIUT09"
 					);
 				}}
 			>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import {
 	Text,
 	View,
@@ -7,9 +7,9 @@ import {
 	Modal,
 	Pressable,
 	TouchableOpacity,
-} from 'react-native';
-import WebView from 'react-native-webview';
-import styles from './styles';
+} from "react-native";
+import WebView from "react-native-webview";
+import styles from "./styles";
 
 const MiniCard = (props) => {
 	const [modal, setModal] = useState(false);
@@ -20,24 +20,24 @@ const MiniCard = (props) => {
 					setModal(true);
 				}}
 			>
-				<View style={{ flexDirection: 'row', margin: 10, marginBottom: 0 }}>
+				<View style={{ flexDirection: "row", margin: 10, marginBottom: 0 }}>
 					<Image
 						source={{
 							uri: `https://i.ytimg.com/vi/${props.videoId}/hqdefault.jpg`,
 						}}
 						style={{
 							borderRadius: 20,
-							width: '45%',
+							width: "45%",
 							height: 100,
 						}}
 					/>
 					<View style={{ paddingLeft: 10 }}>
-						<Text style={styles.title} ellipsizeMode='tail' numberOfLines={1}>
+						<Text style={styles.title} ellipsizeMode="tail" numberOfLines={1}>
 							{props.title}
 						</Text>
 						<Text
 							style={styles.subTitle}
-							ellipsizeMode='tail'
+							ellipsizeMode="tail"
 							numberOfLines={2}
 						>
 							{props.description}
@@ -45,7 +45,7 @@ const MiniCard = (props) => {
 					</View>
 				</View>
 				<Modal
-					animationType={'fade'}
+					animationType={"fade"}
 					transparent={true}
 					visible={modal}
 					onTouchCancel={() => {
@@ -60,8 +60,8 @@ const MiniCard = (props) => {
 							style={{
 								borderRadius: 20,
 								marginTop: 100,
-								width: Dimensions.get('window').width - 20,
-								Height: Dimensions.get('screen').height / 4,
+								width: Dimensions.get("window").width - 20,
+								Height: Dimensions.get("screen").height / 4,
 							}}
 							javaScriptEnabled={true}
 							domStorageEnabled={true}

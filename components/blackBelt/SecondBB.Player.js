@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import { View, FlatList } from 'react-native';
-import styles from '../basic/styles';
-import MiniCard from '../Youtube/miniCard';
-import { API_KEY } from '../basic/Basic.Player';
+import React, { useState, useEffect } from "react";
+import { View, FlatList } from "react-native";
+import styles from "../basic/styles";
+import MiniCard from "../Youtube/miniCard";
+import { API_KEY } from "../basic/Basic.Player";
 
-const PlaylistKey = 'PLTCcbu_9GgTi0Wokp1MoZythf2hbnIBRF';
+const PlaylistKey = "PLTCcbu_9GgTi0Wokp1MoZythf2hbnIBRF";
 
 const SecondBBPlayer = () => {
-	const [miniCardData, setMiniCard] = useState('');
+	const [miniCardData, setMiniCard] = useState("");
 	const [loading, setLoading] = useState(true);
 	const fetchData = () => {
 		fetch(

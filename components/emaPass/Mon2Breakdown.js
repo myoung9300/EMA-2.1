@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import { View, FlatList, SafeAreaView, Text } from 'react-native';
-import styles from './styles';
+import React, { useState, useEffect } from "react";
+import { View, FlatList, SafeAreaView, Text } from "react-native";
+import styles from "./styles";
 
 // import { API_KEY } from '../Youtube/Basic.Player';
 // import MiniCard from '../../MiddleVIew/Youtube/miniCard';
 
-const PlaylistKey = 'PLTCcbu_9GgTgK2OY-JXaPMWYTHNii7gcb';
+const PlaylistKey = "PLTCcbu_9GgTgK2OY-JXaPMWYTHNii7gcb";
 
 const EmaPassMon2 = (key) => {
 	return (

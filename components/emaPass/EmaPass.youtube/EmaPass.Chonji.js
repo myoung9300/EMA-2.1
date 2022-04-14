@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from 'react';
-import { StyleSheet, View, FlatList, SafeAreaView } from 'react-native';
+import React, { useState, useEffect } from "react";
+import { StyleSheet, View, FlatList, SafeAreaView } from "react-native";
 
-import { API_KEY } from '../../basic/Basic.Player';
-import MiniCard from '../../Youtube/miniCard';
-import styles from '../styles';
+import { API_KEY } from "../../basic/Basic.Player";
+import MiniCard from "../../Youtube/miniCard";
+import styles from "../styles";
 
-const PlaylistKey = 'PLTCcbu_9GgTgK2OY-JXaPMWYTHNii7gcb';
+const PlaylistKey = "PLTCcbu_9GgTgK2OY-JXaPMWYTHNii7gcb";
 
 const EmaPassChonJi = (key) => {
-	const [Breakdown, setBreakdown] = useState('');
+	const [Breakdown, setBreakdown] = useState("");
 	const [loading, setLoading] = useState(false);
 	const fetchData = () => {
 		fetch(

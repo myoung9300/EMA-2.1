@@ -1,12 +1,11 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
 	flexContainer: {
 		flex: 1,
-		paddingTop: 16,
 	},
 	gradient: {
-		height: '15%',
+		height: "15%",
 	},
 	smallImage: {
 		width: 80,
@@ -20,42 +19,42 @@ const styles = StyleSheet.create({
 		marginTop: -85,
 	},
 	card: {
-		backgroundColor: '#0045b5',
+		backgroundColor: "#0045b5",
 	},
 	cardOutsideView: {
 		margin: 5,
 		padding: 30,
 	},
 	cardInsideView: {
-		flexDirection: 'row',
-		alignItems: 'center',
+		flexDirection: "row",
+		alignItems: "center",
 	},
 	title: {
 		fontSize: 32,
-		fontFamily: 'Nunito_800ExtraBold',
-		textAlign: 'center',
+		fontFamily: "Nunito_800ExtraBold",
+		textAlign: "center",
 	},
 	subTitle: {
 		fontSize: 26,
-		fontFamily: 'PatrickHandSC_400Regular',
-		textAlign: 'center',
+		fontFamily: "PatrickHandSC_400Regular",
+		textAlign: "center",
 		margin: 6,
 	},
 	instructorProfileCard: {
 		margin: 10,
 	},
 	instructorCardContent: {
-		flexWrap: 'wrap',
-		flexDirection: 'row',
+		flexWrap: "wrap",
+		flexDirection: "row",
 		padding: 8,
-		alignItems: 'center',
+		alignItems: "center",
 	},
 	instructorCardText: {
 		marginTop: 3,
 		marginLeft: 8,
 		fontSize: 24,
-		fontFamily: 'PatrickHandSC_400Regular',
-		textAlign: 'center',
+		fontFamily: "PatrickHandSC_400Regular",
+		textAlign: "center",
 	},
 });
 

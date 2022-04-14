@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import {
 	View,
 	Text,
@@ -6,26 +6,26 @@ import {
 	ScrollView,
 	SafeAreaView,
 	Alert,
-} from 'react-native';
-import { useForm } from 'react-hook-form';
+} from "react-native";
+import { useForm } from "react-hook-form";
 
-import { Auth } from 'aws-amplify';
+import { Auth } from "aws-amplify";
 
-import CustomInput from '../SigninScreen/Custominput';
-import CustomButton from '../SigninScreen/CustomButton';
+import CustomInput from "../SigninScreen/Custominput";
+import CustomButton from "../SigninScreen/CustomButton";
 
 const ForgotPasswordScreen = ({ navigation }) => {
 	const onSendPressed = async (data) => {
 		try {
 			await Auth.forgotPassword(data.username);
-			Alert.alert('Success', 'Code was sent to your email');
-			navigation.navigate('New Password');
+			Alert.alert("Success", "Code was sent to your email");
+			navigation.navigate("New Password");
 		} catch (e) {
-			Alert.alert('Oops', e.message);
+			Alert.alert("Oops", e.message);
 		}
 	};
 	const onSignInPressed = () => {
-		navigation.navigate('Sign In');
+		navigation.navigate("Sign In");
 	};
 
 	const { control, handleSubmit } = useForm();
@@ -34,17 +34,17 @@ const ForgotPasswordScreen = ({ navigation }) => {
 			<Text style={styles.title}>Reset your Password</Text>
 			<View style={styles.break} />
 			<CustomInput
-				name='username'
-				placeholder='Username'
+				name="username"
+				placeholder="Username"
 				control={control}
-				rules={{ required: 'Username is required' }}
+				rules={{ required: "Username is required" }}
 			/>
-			<CustomButton text='Send' onPress={handleSubmit(onSendPressed)} />
+			<CustomButton text="Send" onPress={handleSubmit(onSendPressed)} />
 			<View style={styles.break} />
 			<CustomButton
-				text='Back to Sign In'
+				text="Back to Sign In"
 				onPress={onSignInPressed}
-				type='TERTIARY'
+				type="TERTIARY"
 			/>
 		</SafeAreaView>
 	);
@@ -52,13 +52,13 @@ const ForgotPasswordScreen = ({ navigation }) => {
 
 const styles = StyleSheet.create({
 	container: {
-		paddingTop: 28,
-		alignItems: 'center',
+		paddingTop: 40,
+		alignItems: "center",
 	},
 	title: {
 		fontSize: 24,
-		fontWeight: 'bold',
-		color: '#0045b5',
+		fontWeight: "bold",
+		color: "#0045b5",
 		margin: 10,
 	},
 	break: {

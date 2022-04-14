@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { useForm } from 'react-hook-form';
+import React, { useState } from "react";
+import { useForm } from "react-hook-form";
 import {
 	View,
 	Alert,
@@ -7,13 +7,13 @@ import {
 	StyleSheet,
 	SafeAreaView,
 	useWindowDimensions,
-} from 'react-native';
+} from "react-native";
 
-import { Auth } from 'aws-amplify';
+import { Auth } from "aws-amplify";
 
-import EMABlue from '../../../assets/images/EMABlue.png';
-import CustomInput from '../SigninScreen/Custominput';
-import CustomButton from '../SigninScreen/CustomButton';
+import EMABlue from "../../../assets/images/EMABlue.png";
+import CustomInput from "../SigninScreen/Custominput";
+import CustomButton from "../SigninScreen/CustomButton";
 
 const SignInScreen = ({ navigation }) => {
 	const { height } = useWindowDimensions();
@@ -32,17 +32,17 @@ const SignInScreen = ({ navigation }) => {
 		setLoading(true);
 		try {
 			const response = await Auth.signIn(data.username, data.password);
-			navigation.navigate('HomeStack');
+			navigation.navigate("HomeStack");
 		} catch (e) {
-			Alert.alert('Oops', e.message);
+			Alert.alert("Oops", e.message);
 		}
 		setLoading(false);
 	};
 	const onForgotPasswordPress = () => {
-		navigation.navigate('Forgot Password');
+		navigation.navigate("Forgot Password");
 	};
 	const onSignUp = () => {
-		navigation.navigate('Sign Up');
+		navigation.navigate("Sign Up");
 	};
 
 	return (
@@ -50,41 +50,41 @@ const SignInScreen = ({ navigation }) => {
 			<Image style={styles.logo} source={EMABlue} />
 			<View style={styles.break} />
 			<CustomInput
-				name='username'
-				placeholder='Username'
+				name="username"
+				placeholder="Username"
 				control={control}
-				rules={{ required: 'Username is required' }}
+				rules={{ required: "Username is required" }}
 			/>
 			<CustomInput
-				name='password'
-				placeholder='Password'
+				name="password"
+				placeholder="Password"
 				control={control}
 				secureTextEntry
-				type='PRIMARY'
+				type="PRIMARY"
 				rules={{
-					required: 'Password is required',
+					required: "Password is required",
 					minLength: {
 						value: 4,
-						message: 'Password should be minumium 6 characters long',
+						message: "Password should be minumium 6 characters long",
 					},
 				}}
 			/>
 
 			<CustomButton
-				text={loading ? 'Loading...' : 'Sign In'}
+				text={loading ? "Loading..." : "Sign In"}
 				onPress={handleSubmit(onSignInPress)}
 			/>
 			<CustomButton
-				text='Forgot password?'
+				text="Forgot password?"
 				onPress={onForgotPasswordPress}
-				type='TERTIARY'
+				type="TERTIARY"
 			/>
 			<View style={styles.break} />
 			<View style={styles.break} />
 			<CustomButton
 				text="Don't have an account? Create one"
 				onPress={onSignUp}
-				type='TERTIARY'
+				type="TERTIARY"
 			/>
 		</SafeAreaView>
 	);
@@ -92,13 +92,13 @@ const SignInScreen = ({ navigation }) => {
 
 const styles = StyleSheet.create({
 	container: {
-		paddingTop: 28,
-		alignItems: 'center',
+		paddingTop: 40,
+		alignItems: "center",
 	},
 	logo: {
-		alignSelf: 'center',
+		alignSelf: "center",
 		borderRadius: 10,
-		width: '90%',
+		width: "90%",
 		height: 120,
 	},
 	break: {

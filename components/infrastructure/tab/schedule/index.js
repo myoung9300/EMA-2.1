@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import ScheduleScreen from './scheduleScreen';
-import WeeklySchedule from './weeklySchedule';
-import CalanderScreen from './calander';
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import ScheduleScreen from "./scheduleScreen";
+import WeeklySchedule from "./weeklySchedule";
+import CalanderScreen from "./calander";
 
 const Stack = createNativeStackNavigator();
 
@@ -11,19 +11,19 @@ const ScheduleScreenNavigator = () => {
 	return (
 		<Stack.Navigator
 			screenOptions={{
-				headerTintColor: 'white',
+				headerTintColor: "white",
 				headerStyle: {
-					backgroundColor: '#0045b5',
+					backgroundColor: "#0045b5",
 				},
 			}}
 		>
 			<Stack.Screen
 				options={{ headerShown: false }}
-				name='ScheduleScreen'
+				name="ScheduleScreen"
 				component={ScheduleScreen}
 			/>
-			<Stack.Screen name='Weekly Schedule' component={WeeklySchedule} />
-			<Stack.Screen name='Calander' component={CalanderScreen} />
+			<Stack.Screen name="Weekly Schedule" component={WeeklySchedule} />
+			<Stack.Screen name="Calander" component={CalanderScreen} />
 		</Stack.Navigator>
 	);
 };

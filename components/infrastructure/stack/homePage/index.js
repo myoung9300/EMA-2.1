@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect } from "react";
 import {
 	SafeAreaView,
 	Text,
@@ -6,12 +6,12 @@ import {
 	ScrollView,
 	Image,
 	View,
-} from 'react-native';
-import { Auth } from 'aws-amplify';
+} from "react-native";
+import { Auth } from "aws-amplify";
 
-import styles from './styles';
+import styles from "./styles";
 
-import EMABlue from '../../../../assets/images/EMABlue.png';
+import EMABlue from "../../../../assets/images/EMABlue.png";
 
 const HomePage = ({ navigation }) => {
 	const signOut = () => {
@@ -32,26 +32,31 @@ const HomePage = ({ navigation }) => {
 			<Text style={styles.smallText}>2. Belt Testing Registration</Text>
 			<Text style={styles.smallText}>3. And MORE!!</Text>
 			<ScrollView showsVerticalScrollIndicator={false}>
-				<TouchableOpacity onPress={() => navigation.navigate('EMA Pass')}>
+				<TouchableOpacity onPress={() => navigation.navigate("EMA Pass")}>
 					<Text style={styles.area}>EMA Pass</Text>
 				</TouchableOpacity>
-				<TouchableOpacity onPress={() => navigation.navigate('Basic')}>
+				<TouchableOpacity onPress={() => navigation.navigate("Basic")}>
 					<Text style={styles.area}>Lil' Dragons & Basic</Text>
 				</TouchableOpacity>
-				<TouchableOpacity onPress={() => navigation.navigate('Level 1')}>
+				<TouchableOpacity onPress={() => navigation.navigate("Level 1")}>
 					<Text style={styles.area}>Level 1</Text>
 				</TouchableOpacity>
-				<TouchableOpacity onPress={() => navigation.navigate('Level 2')}>
+				<TouchableOpacity onPress={() => navigation.navigate("Level 2")}>
 					<Text style={styles.area}>Level 2</Text>
 				</TouchableOpacity>
-				<TouchableOpacity onPress={() => navigation.navigate('Level 3')}>
+				<TouchableOpacity onPress={() => navigation.navigate("Level 3")}>
 					<Text style={styles.area}>Level 3</Text>
 				</TouchableOpacity>
-				<TouchableOpacity onPress={() => navigation.navigate('Black Belt')}>
+				<TouchableOpacity onPress={() => navigation.navigate("Black Belt")}>
 					<Text style={styles.area}>Black Belt</Text>
 				</TouchableOpacity>
-				<TouchableOpacity onPress={() => navigation.navigate('Exclusive')}>
+				<TouchableOpacity onPress={() => navigation.navigate("Exclusive")}>
 					<Text style={styles.area}>Exclusive</Text>
+				</TouchableOpacity>
+				<TouchableOpacity onPress={() => navigation.navigate("Push")}>
+					<Text style={[styles.area, { fontSize: 18, padding: 5 }]}>
+						APP Notifications
+					</Text>
 				</TouchableOpacity>
 			</ScrollView>
 		</SafeAreaView>

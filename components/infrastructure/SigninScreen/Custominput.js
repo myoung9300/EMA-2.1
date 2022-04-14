@@ -1,6 +1,6 @@
-import React from 'react';
-import { Controller } from 'react-hook-form';
-import { Text, TextInput, StyleSheet, SafeAreaView } from 'react-native';
+import React from "react";
+import { Controller } from "react-hook-form";
+import { Text, TextInput, StyleSheet, SafeAreaView } from "react-native";
 
 const CustomInput = ({
 	control,
@@ -22,7 +22,7 @@ const CustomInput = ({
 					<SafeAreaView
 						style={[
 							styles.container,
-							{ borderColor: error ? 'red' : '#f9fbfc' },
+							{ borderColor: error ? "red" : "#f9fbfc" },
 						]}
 					>
 						<TextInput
@@ -33,12 +33,12 @@ const CustomInput = ({
 							placeholder={placeholder}
 							secureTextEntry={secureTextEntry}
 							enablesReturnKeyAutomatically={true}
-							autoCapitalize={'none'}
+							autoCapitalize={"none"}
 						/>
 					</SafeAreaView>
 					{error && (
-						<Text style={{ color: 'red', alignSelf: 'stretch' }}>
-							{error.message || 'ERROR'}
+						<Text style={{ color: "red", alignSelf: "stretch" }}>
+							{error.message || "ERROR"}
 						</Text>
 					)}
 				</>
@@ -49,8 +49,8 @@ const CustomInput = ({
 
 const styles = StyleSheet.create({
 	container: {
-		backgroundColor: 'white',
-		width: '90%',
+		backgroundColor: "white",
+		width: "90%",
 		height: 35,
 		borderWidth: 2,
 		borderRadius: 5,
@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
 	},
 	input: {
 		flex: 1,
-		textAlign: 'center',
+		textAlign: "center",
 		fontSize: 18,
 	},
 });

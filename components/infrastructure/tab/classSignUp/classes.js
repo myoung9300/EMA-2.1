@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState } from "react";
 
 import {
 	SafeAreaView,
@@ -6,16 +6,16 @@ import {
 	TouchableOpacity,
 	Text,
 	ActivityIndicator,
-} from 'react-native';
-import WebView from 'react-native-webview';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
+} from "react-native";
+import WebView from "react-native-webview";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 
-import styles from '../studentPortal/styles';
+import styles from "../studentPortal/styles";
 
 const Classes = () => {
 	const [canGoBack, setCanGoBack] = useState(false);
 	const [canGoForward, setCanGoForward] = useState(false);
-	const [currentUrl, setCurrentUrl] = useState('');
+	const [currentUrl, setCurrentUrl] = useState("");
 
 	const webviewRef = useRef(null);
 
@@ -38,10 +38,10 @@ const Classes = () => {
 			</View>
 			<WebView
 				source={{
-					uri: 'https://ema-planner.herokuapp.com/student_classes',
+					uri: "https://ema-planner.herokuapp.com/student_classes",
 				}}
 				startInLoadingState={true}
-				renderLoading={() => <ActivityIndicator color='black' size='large' />}
+				renderLoading={() => <ActivityIndicator color="black" size="large" />}
 				ref={webviewRef}
 				onNavigationStateChange={(navState) => {
 					setCanGoBack(navState.canGoBack);

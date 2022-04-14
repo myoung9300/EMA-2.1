@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 import {
 	Text,
 	StyleSheet,
 	TouchableWithoutFeedback,
 	Keyboard,
 	TouchableOpacity,
-} from 'react-native';
+} from "react-native";
 
 const DismissKeyboard = ({ children }) => (
 	<TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
@@ -16,7 +16,7 @@ const DismissKeyboard = ({ children }) => (
 const CustomButton = ({
 	onPress,
 	text,
-	type = 'PRIMARY',
+	type = "PRIMARY",
 	bgColor,
 	fgColor,
 }) => {
@@ -46,29 +46,29 @@ const CustomButton = ({
 
 const styles = StyleSheet.create({
 	container: {
-		width: '95%',
+		width: "95%",
 		padding: 15,
 		marginVertical: 5,
-		alignItems: 'center',
+		alignItems: "center",
 		borderRadius: 10,
 	},
 	container_PRIMARY: {
-		backgroundColor: '#0045b5',
+		backgroundColor: "#0045b5",
 	},
 	container_SECONDARY: {
-		borderColor: '#0045b5',
+		borderColor: "#0045b5",
 		borderWidth: 2,
 	},
 	container_TERTIARY: {},
 	text: {
-		fontWeight: 'bold',
-		color: 'white',
+		fontWeight: "bold",
+		color: "white",
 	},
 	text_SECONDARY: {
-		color: '#0045b5',
+		color: "#0045b5",
 	},
 	text_TERTIARY: {
-		color: 'gray',
+		color: "gray",
 	},
 });
 export default CustomButton;

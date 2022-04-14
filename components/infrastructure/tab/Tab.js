@@ -1,58 +1,58 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { ActivityIndicator, TouchableOpacity, View, Text } from 'react-native';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import * as Animatable from 'react-native-animatable';
+import React, { useState, useEffect, useRef } from "react";
+import { ActivityIndicator, TouchableOpacity, View, Text } from "react-native";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import * as Animatable from "react-native-animatable";
 
-import { Auth, Hub } from 'aws-amplify';
+import { Auth, Hub } from "aws-amplify";
 
-import Icon, { Icons } from '../tab/icons';
+import Icon, { Icons } from "../tab/icons";
 
-import ScheduleScreenNavigator from './schedule/index';
-import ClassScreenNavigator from './classSignUp';
-import StackNavigation from '../stack/Stack';
-import StudentPortal from './studentPortal/index';
-import VirtualClass from './virtualKarate/index';
-import styles from '../stack/homePage/styles';
+import ScheduleScreenNavigator from "./schedule/index";
+import ClassScreenNavigator from "./classSignUp";
+import StackNavigation from "../stack/Stack";
+import StudentPortal from "./studentPortal/index";
+import VirtualClass from "./virtualKarate/index";
+import styles from "../stack/homePage/styles";
 
 const TabArr = [
 	{
-		route: 'Home',
-		label: 'Home',
+		route: "Home",
+		label: "Home",
 		type: Icons.Ionicons,
-		activeIcon: 'grid',
-		inActiveIcon: 'grid-outline',
+		activeIcon: "grid",
+		inActiveIcon: "grid-outline",
 		component: StackNavigation,
 	},
 	{
-		route: 'Class Sign Up',
-		label: 'Class',
+		route: "Class Sign Up",
+		label: "Class",
 		type: Icons.MaterialCommunityIcons,
-		activeIcon: 'account-group',
-		inActiveIcon: 'account-group-outline',
+		activeIcon: "account-group",
+		inActiveIcon: "account-group-outline",
 		component: ClassScreenNavigator,
 	},
 	{
-		route: 'Student Portal',
-		label: 'Portal',
+		route: "Student Portal",
+		label: "Portal",
 		type: Icons.MaterialCommunityIcons,
-		activeIcon: 'checkbox-multiple-blank-circle',
-		inActiveIcon: 'checkbox-multiple-blank-circle-outline',
+		activeIcon: "checkbox-multiple-blank-circle",
+		inActiveIcon: "checkbox-multiple-blank-circle-outline",
 		component: StudentPortal,
 	},
 	{
-		route: 'Schedule',
-		label: 'Schedule',
+		route: "Schedule",
+		label: "Schedule",
 		type: Icons.MaterialCommunityIcons,
-		activeIcon: 'clock',
-		inActiveIcon: 'clock-outline',
+		activeIcon: "clock",
+		inActiveIcon: "clock-outline",
 		component: ScheduleScreenNavigator,
 	},
 	{
-		route: 'Virtual Karate',
-		label: 'Virtual',
+		route: "Virtual Karate",
+		label: "Virtual",
 		type: Icons.Ionicons,
-		activeIcon: 'ios-videocam',
-		inActiveIcon: 'ios-videocam-outline',
+		activeIcon: "ios-videocam",
+		inActiveIcon: "ios-videocam-outline",
 		component: VirtualClass,
 	},
 ];
@@ -87,9 +87,9 @@ const TabBarButton = (props) => {
 				<Icon
 					type={item.type}
 					name={focused ? item.activeIcon : item.inActiveIcon}
-					color={focused ? '#8c8c8c' : '#0045b5'}
+					color={focused ? "#8c8c8c" : "#0045b5"}
 				/>
-				<Text style={[styles.btn, { color: focused ? '#0045b5' : '#8c8c8c' }]}>
+				<Text style={[styles.btn, { color: focused ? "#0045b5" : "#8c8c8c" }]}>
 					{item.label}
 				</Text>
 			</Animatable.View>
@@ -115,17 +115,17 @@ const TabNavigation = () => {
 	}, []);
 	useEffect(() => {
 		const listener = (data) => {
-			if (data.payload.event === 'signIn' || data.payload.event === 'signOut') {
+			if (data.payload.event === "signIn" || data.payload.event === "signOut") {
 				checkUser();
 			}
 		};
-		Hub.listen('auth', listener);
-		return () => Hub.remove('auth', listener);
+		Hub.listen("auth", listener);
+		return () => Hub.remove("auth", listener);
 	}, []);
 
 	if (user === undefined) {
 		return (
-			<View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+			<View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
 				<ActivityIndicator />
 			</View>
 		);

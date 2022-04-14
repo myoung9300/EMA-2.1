@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import { StyleSheet, View, FlatList, SafeAreaView } from 'react-native';
+import React, { useState, useEffect } from "react";
+import { StyleSheet, View, FlatList, SafeAreaView } from "react-native";
 
-import { API_KEY } from '../../basic/Basic.Player';
-import MiniCard from '../../Youtube/miniCard';
+import { API_KEY } from "../../basic/Basic.Player";
+import MiniCard from "../../Youtube/miniCard";
 
-const PlaylistKey = 'PLTCcbu_9GgTixk503SUsU4tFLOLgVd-6_';
+const PlaylistKey = "PLTCcbu_9GgTixk503SUsU4tFLOLgVd-6_";
 
 const EmaPassChungGun = (key) => {
-	const [Breakdown, setBreakdown] = useState('');
+	const [Breakdown, setBreakdown] = useState("");
 	const [loading, setLoading] = useState(false);
 	const fetchData = () => {
 		fetch(
@@ -46,7 +46,7 @@ const EmaPassChungGun = (key) => {
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
-		backgroundColor: '#8aff8a',
+		backgroundColor: "#8aff8a",
 	},
 });
 

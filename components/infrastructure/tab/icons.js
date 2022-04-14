@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { StyleSheet } from 'react-native';
-import Ionicons from 'react-native-vector-icons/Ionicons';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
+import React, { useState, useEffect } from "react";
+import { StyleSheet } from "react-native";
+import Ionicons from "react-native-vector-icons/Ionicons";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 export const Icons = {
 	Ionicons,

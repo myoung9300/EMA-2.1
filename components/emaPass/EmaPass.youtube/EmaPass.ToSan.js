@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import { View, FlatList, SafeAreaView, Text } from 'react-native';
-import styles from '../styles';
+import React, { useState, useEffect } from "react";
+import { View, FlatList, SafeAreaView, Text } from "react-native";
+import styles from "../styles";
 
 // import { API_KEY } from '../../basic/Basic.Player';
 // import MiniCard from '../../Youtube/miniCard';
 
-const PlaylistKey = 'JiHBHcDCQXI';
+const PlaylistKey = "JiHBHcDCQXI";
 
 const EmaPassToSan = (key) => {
 	return (
