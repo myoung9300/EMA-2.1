@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Alert } from "react-native";
 import { StatusBar } from "expo-status-bar";
 
@@ -11,6 +11,7 @@ import awsconfig from "./src/aws-exports";
 import registerNNPushToken from "native-notify";
 import { getPushDataObject } from "native-notify";
 import axios from "axios";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 import TabNavigation from "./components/infrastructure/tab/Tab";
 
@@ -26,10 +27,30 @@ import InstructorPVT from "./components/infrastructure/tab/classSignUp/instructo
 Amplify.configure(awsconfig);
 export default function App() {
 	registerNNPushToken(2348, "hqEMgzJMPWeyd0tRiFUUPl");
-	let pushDataObject = getPushDataObject();
+	let pushDataObject = getPushDataObject("");
+
+	const setData = async () => {
+		try {
+			if ("alertTitle" in pushDataObject) {
+				const jsonValue = JSON.stringify(pushDataObject);
+				await AsyncStorage.setItem("@pushData", jsonValue);
+			}
+		} catch (e) {
+			console.log("e", e);
+		}
+		console.log("p...", pushDataObject);
+	};
+
 	useEffect(() => {
 		if ("alertTitle" in pushDataObject) {
-			Alert.alert(pushDataObject.alertTitle, pushDataObject.alertMessage);
+			Alert.alert(pushDataObject.alertTitle, pushDataObject.alertMessage, [
+				{
+					text: "OKAY",
+					onPress: () => {
+						setData();
+					},
+				},
+			]);
 		}
 
 		axios.post(`https://app.nativenotify.com/api/analytics`, {

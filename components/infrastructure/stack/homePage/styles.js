@@ -49,7 +49,6 @@ const styles = StyleSheet.create({
 	},
 	bigText: {
 		fontFamily: "Nunito_800ExtraBold",
-		paddingTop: 200,
 		color: "white",
 		fontSize: 40,
 		textAlign: "center",
@@ -79,6 +78,13 @@ const styles = StyleSheet.create({
 		paddingBottom: 16,
 		fontFamily: "PatrickHandSC_400Regular",
 		fontSize: 16,
+	},
+	notificationButton: {
+		alignSelf: "center",
+		padding: 20,
+		marginBottom: 16,
+		backgroundColor: "#0045b5",
+		borderRadius: 10,
 	},
 });
 
