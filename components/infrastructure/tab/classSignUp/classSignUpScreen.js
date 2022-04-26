@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import {
 	Image,
 	SafeAreaView,
@@ -8,16 +8,9 @@ import {
 	ScrollView,
 	Alert,
 } from "react-native";
-import { getPushDataObject } from "native-notify";
 import styles from "../../stack/homePage/styles";
 
 export default function ClassSignUp({ navigation }) {
-	let pushDataObject = getPushDataObject();
-	useEffect(() => {
-		if ("screenName" in pushDataObject) {
-			navigation.navigate(pushDataObject.screenName);
-		}
-	});
 	return (
 		<SafeAreaView style={styles.container}>
 			<Image
