@@ -74,10 +74,10 @@ const styles = StyleSheet.create({
 	},
 	btn: {
 		flexDirection: "row",
+		marginBottom: 8,
 		alignItems: "center",
-		paddingBottom: 16,
 		fontFamily: "PatrickHandSC_400Regular",
-		fontSize: 16,
+		fontSize: 20,
 	},
 	notificationButton: {
 		alignSelf: "center",
