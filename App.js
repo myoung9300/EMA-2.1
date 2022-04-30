@@ -29,34 +29,15 @@ export default function App() {
 	registerNNPushToken(2348, "hqEMgzJMPWeyd0tRiFUUPl");
 	let pushDataObject = getPushDataObject("");
 
-	const setData = async () => {
-		try {
-			if ("alertTitle" in pushDataObject) {
-				const jsonValue = JSON.stringify(pushDataObject);
-				await AsyncStorage.setItem("@pushData", jsonValue);
-			}
-		} catch (e) {
-			console.log("e", e);
-		}
-		console.log("p...", pushDataObject);
-	};
-
 	useEffect(() => {
 		if ("alertTitle" in pushDataObject) {
-			Alert.alert(pushDataObject.alertTitle, pushDataObject.alertMessage, [
-				{
-					text: "OKAY",
-					onPress: () => {
-						setData();
-					},
-				},
-			]);
+			Alert.alert(pushDataObject.alertTitle, pushDataObject.alertMessage);
 		}
 
 		axios.post(`https://app.nativenotify.com/api/analytics`, {
 			app_id: 2348,
 			app_token: "hqEMgzJMPWeyd0tRiFUUPl",
-			screenName: "Home",
+			screenName: "HomeStack",
 		});
 	});
 	let [fontsLoaded, error] = useFonts({

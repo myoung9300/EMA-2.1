@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
 	smallText: {
 		fontFamily: "PatrickHandSC_400Regular",
 		fontSize: 16,
-		alignSelf: "center",
+		textAlign: "center",
 		color: "white",
 	},
 	bigText: {

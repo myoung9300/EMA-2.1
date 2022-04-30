@@ -55,7 +55,7 @@ import EmaPassGyeBek from "../../emaPass/EmaPass.youtube/EmaPass.GyeBek";
 import EmaPassExodus from "../../emaPass/EmaPass.youtube/EmaPass.Exodus";
 import EmaPassChungMu from "../../emaPass/EmaPass.youtube/EmaPass.ChungMu";
 import SemiPVT from "../tab/classSignUp/semiPVT";
-import Notifications from "../../allStudents/Notifications";
+import Notifications from "../../allStudents/Notifications/Notifications";
 
 const Stack = createNativeStackNavigator();
 
