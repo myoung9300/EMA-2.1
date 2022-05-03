@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { Alert } from "react-native";
 import { StatusBar } from "expo-status-bar";
 
@@ -11,7 +11,6 @@ import awsconfig from "./src/aws-exports";
 import registerNNPushToken from "native-notify";
 import { getPushDataObject } from "native-notify";
 import axios from "axios";
-import AsyncStorage from "@react-native-async-storage/async-storage";
 
 import TabNavigation from "./components/infrastructure/tab/Tab";
 
@@ -22,7 +21,6 @@ import {
 } from "@expo-google-fonts/nunito";
 import { useFonts } from "expo-font";
 import AppLoading from "expo-app-loading";
-import InstructorPVT from "./components/infrastructure/tab/classSignUp/instructors";
 
 Amplify.configure(awsconfig);
 export default function App() {

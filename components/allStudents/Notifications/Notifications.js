@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { View, Text } from "react-native";
+import { View, Text, FlatList } from "react-native";
 import axios from "axios";
 
-import { SwipeListView } from "react-native-swipe-list-view";
 import VisableItem from "./VisibleItem";
-import HiddenItemsWithActions from "./HiddenItemsWithActions";
 import styles from "./styles";
 
 const Notifications = () => {
@@ -17,40 +15,16 @@ const Notifications = () => {
 				`https://app.nativenotify.com/api/notification/inbox/2348/hqEMgzJMPWeyd0tRiFUUPl`
 			)
 			.then((res) => {
-				setPushData(res.data.slice(0, 5));
+				setPushData(res.data.slice(0, 4));
+				setLoading(false);
 			});
 	};
 	useEffect(() => {
 		getData();
 	}, []);
 
-	const closeRow = (rowMap, rowKey) => {
-		if (rowMap[rowKey]) {
-			rowMap[rowKey].closeRow();
-		}
-	};
-
-	const deleteRow = (rowMap, rowKey) => {
-		closeRow(rowMap, rowKey);
-		const newData = [...pushData];
-		const prevIndex = pushData.findIndex((item) => item.index === rowKey);
-		newData.splice(prevIndex, 1);
-		setPushData(newData);
-	};
-
-	const renderItem = (data, rowMap) => {
-		return <VisableItem data={data} rowMap={rowMap} />;
-	};
-
-	const renderHiddenItem = (data, rowMap) => {
-		return (
-			<HiddenItemsWithActions
-				data={data}
-				rowMap={rowMap}
-				onClose={() => closeRow(rowMap, data.index)}
-				onDelete={() => deleteRow(data, data.index)}
-			/>
-		);
+	const renderItem = (data) => {
+		return <VisableItem data={data} />;
 	};
 
 	return (
@@ -62,14 +36,12 @@ const Notifications = () => {
 			<Text style={styles.smallText}>
 				Pull down to refresh and get the latest notification updates
 			</Text>
-			<SwipeListView
+			<FlatList
 				data={pushData}
-				renderItem={renderItem}
-				renderHiddenItem={renderHiddenItem}
+				refreshing={loading}
+				onRefresh={() => getData()}
 				keyExtractor={(item, index) => index}
-				disableRightSwipe
-				rightOpenValue={-150}
-				swipeToOpenPercent={10}
+				renderItem={renderItem}
 			/>
 		</View>
 	);
