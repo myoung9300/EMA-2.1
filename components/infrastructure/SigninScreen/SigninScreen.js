@@ -41,6 +41,9 @@ const SignInScreen = ({ navigation }) => {
 	const onForgotPasswordPress = () => {
 		navigation.navigate("Forgot Password");
 	};
+	const onConfirmationPress = () => {
+		navigation.navigate("Confirm Email");
+	};
 	const onSignUp = () => {
 		navigation.navigate("Sign Up");
 	};
@@ -78,6 +81,11 @@ const SignInScreen = ({ navigation }) => {
 				text="Forgot password?"
 				onPress={onForgotPasswordPress}
 				type="TERTIARY"
+			/>
+			<CustomButton
+				text="Confirm account..."
+				onPress={onConfirmationPress}
+				type="THIRD"
 			/>
 			<View style={styles.break} />
 			<View style={styles.break} />

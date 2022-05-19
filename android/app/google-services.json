@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "831176538648",
+    "project_id": "native-notify-for-androi-bc65b",
+    "storage_bucket": "native-notify-for-androi-bc65b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:831176538648:android:081e378bcda7bf1aeee16d",
+        "android_client_info": {
+          "package_name": "com.myoung9300.emaapp2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "831176538648-csu5cr697fll156ptk534gv0qfvm1cd5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCSQcM4wbCagrAg1DXvnHKbJNrqkNJosTM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "831176538648-csu5cr697fll156ptk534gv0qfvm1cd5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

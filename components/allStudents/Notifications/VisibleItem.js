@@ -17,9 +17,7 @@ const VisableItem = (props) => {
 						{data.item.title}
 					</Text>
 					<View style={styles.break} />
-					<Text style={styles.details} numberOfLines={3}>
-						{data.item.message}
-					</Text>
+					<Text style={styles.details}>{data.item.message}</Text>
 					<View style={styles.break} />
 				</View>
 			</TouchableHighlight>

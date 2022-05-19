@@ -59,7 +59,9 @@ const styles = StyleSheet.create({
 		borderColor: "#0045b5",
 		borderWidth: 2,
 	},
-	container_TERTIARY: {},
+	container_THIRD: {
+		padding: 0,
+	},
 	text: {
 		fontWeight: "bold",
 		color: "white",
@@ -68,6 +70,9 @@ const styles = StyleSheet.create({
 		color: "#0045b5",
 	},
 	text_TERTIARY: {
+		color: "gray",
+	},
+	text_THIRD: {
 		color: "gray",
 	},
 });
