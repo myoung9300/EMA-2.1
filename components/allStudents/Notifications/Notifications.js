@@ -34,7 +34,7 @@ const Notifications = () => {
 				App notifications will show here
 			</Text>
 			<Text style={styles.smallText}>
-				Pull down to refresh and get the latest notification updates
+				Click on a notification to see when it was sent...
 			</Text>
 			<FlatList
 				data={pushData}
