@@ -45,10 +45,10 @@ const SignUpScreen = ({ navigation }) => {
 		navigation.navigate("Sign In");
 	};
 	const onTermsOfUsePressed = () => {
-		console.warn("Terms Of Use");
+		navigation.navigate("Terms of Use");
 	};
 	const onPrivacyPolicyPressed = () => {
-		console.warn("Privacy Policy");
+		navigation.navigate("Privacy Policy");
 	};
 
 	return (

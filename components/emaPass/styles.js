@@ -23,6 +23,31 @@ const styles = StyleSheet.create({
 		fontSize: 30,
 		textAlign: "center",
 	},
+	break: {
+		padding: 16,
+	},
+	headText: {
+		fontFamily: "Nunito_800ExtraBold",
+		textAlign: "center",
+		fontSize: 30,
+	},
+	subHeadText: {
+		fontFamily: "Nunito_800ExtraBold",
+		textAlign: "center",
+		fontSize: 20,
+	},
+	bodyText: {
+		fontFamily: "PatrickHandSC_400Regular",
+		fontSize: 16,
+		paddingLeft: 10,
+	},
+	ruleText: {
+		color: "gray",
+		margin: 10,
+	},
+	link: {
+		color: "#fdb875",
+	},
 });
 
 export default styles;

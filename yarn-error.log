@@ -1,11 +1,11 @@
 Arguments: 
-  /usr/local/bin/node /usr/local/bin/yarn install
+  /usr/local/bin/node /Users/mattyoung/.yarn/bin/yarn.js add react-native-purchases
 
 PATH: 
-  /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin
+  /Users/mattyoung/.yarn/bin:/Users/mattyoung/.config/yarn/global/node_modules/.bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Users/mattyoung/.yarn/bin:/Users/mattyoung/.config/yarn/global/node_modules/.bin
 
 Yarn version: 
-  1.22.17
+  1.22.18
 
 Node version: 
   16.13.2
@@ -14,7 +14,7 @@ Platform:
   darwin x64
 
 Trace: 
-  Error: EACCES: permission denied, unlink '/Users/mattyoung/Documents/Projects/EMA-2.0/node_modules/@aws-amplify/core/node_modules/@aws-crypto/sha256-js/node_modules/@aws-sdk/types/CHANGELOG.md'
+  Error: EACCES: permission denied, unlink '/Users/mattyoung/Documents/Projects/EMA-2.0/node_modules/@aws-amplify/core/node_modules/@aws-crypto/sha256-js/node_modules/@aws-sdk/types/package.json'
 
 npm manifest: 
   {
@@ -4388,7 +4388,7 @@ Lockfile:
       unimodules-task-manager-interface "~7.1.0"
       uuid "^3.4.0"
   
-  expo-splash-screen@~0.14.0:
+  expo-splash-screen@~0.14.0, expo-splash-screen@~0.14.1:
     version "0.14.2"
     resolved "https://registry.npmjs.org/expo-splash-screen/-/expo-splash-screen-0.14.2.tgz"
     integrity sha512-X25D/0E2AWEFGgDWIVXZ5Bl7FhYk7TgVhEWvplBqrDY7G7vg5l1aoH6PelOQINWPsa1dcRyA7REdN2ltO+0LAw==

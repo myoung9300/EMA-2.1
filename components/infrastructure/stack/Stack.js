@@ -4,6 +4,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { Auth, Hub } from "aws-amplify";
 
 import HomePage from "./homePage";
+import Subscription from "../../emaPass/Subscription";
 import EmaPass from "../../emaPass";
 import BasicHomeScreen from "../../basic";
 import BasicPlayer from "../../basic/Basic.Player";
@@ -56,6 +57,8 @@ import EmaPassExodus from "../../emaPass/EmaPass.youtube/EmaPass.Exodus";
 import EmaPassChungMu from "../../emaPass/EmaPass.youtube/EmaPass.ChungMu";
 import SemiPVT from "../tab/classSignUp/semiPVT";
 import Notifications from "../../allStudents/Notifications/Notifications";
+import PrivacyPolicy from "../SignUpScreen/PrivacyPolicy";
+import TermsOfUse from "../SignUpScreen/TermsOfUse";
 
 const Stack = createNativeStackNavigator();
 
@@ -108,6 +111,7 @@ const StackNavigation = () => {
 						options={{ headerShown: false }}
 						component={HomePage}
 					/>
+					<Stack.Screen name="Subscription" component={Subscription} />
 					<Stack.Screen name="EMA Pass" component={EmaPass} />
 					<Stack.Screen name="Exclusive" component={Exclusive} />
 					<Stack.Screen name="Level 1 Breakdowns" component={Lvl1Breakdown} />
@@ -167,6 +171,8 @@ const StackNavigation = () => {
 					/>
 					<Stack.Screen name="Push" component={Notifications} />
 					<Stack.Screen name="Semi pvt Lessons" component={SemiPVT} />
+					<Stack.Screen name="Privacy Policy" component={PrivacyPolicy} />
+					<Stack.Screen name="Terms of Use" component={TermsOfUse} />
 				</Stack.Group>
 			) : (
 				<Stack.Group>

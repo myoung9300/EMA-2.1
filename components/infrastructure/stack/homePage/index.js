@@ -32,7 +32,7 @@ const HomePage = ({ navigation }) => {
 			<Text style={styles.smallText}>2. Belt Testing Registration</Text>
 			<Text style={styles.smallText}>3. And MORE!!</Text>
 			<ScrollView showsVerticalScrollIndicator={false}>
-				<TouchableOpacity onPress={() => navigation.navigate("EMA Pass")}>
+				<TouchableOpacity onPress={() => navigation.navigate("Subscription")}>
 					<Text style={styles.area}>EMA Pass</Text>
 				</TouchableOpacity>
 				<TouchableOpacity onPress={() => navigation.navigate("Basic")}>
